@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *passWord;
 @property (weak, nonatomic) IBOutlet UIButton *logIn;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
 @implementation ViewController
@@ -92,27 +93,34 @@
 }
 
 -(void) keyboardNotification: (NSNotification *)notification {
-    NSDictionary *userInfo = [notification userInfo];    
+    NSDictionary *userInfo = [notification userInfo];
     CGRect startFrame;
     CGRect endFrame;
-    NSTimeInterval keyboardAnimationDuration;
-    UIViewAnimationCurve animationCurve;
     [userInfo[UIKeyboardFrameBeginUserInfoKey] getValue: &startFrame];
     [userInfo[UIKeyboardFrameEndUserInfoKey] getValue: &endFrame];
-    [userInfo[UIKeyboardAnimationCurveUserInfoKey] getValue: &animationCurve];
-    keyboardAnimationDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    CGFloat difference = endFrame.origin.y - startFrame.origin.y;    
-    [UIView beginAnimations: nil context: nil];
-    [UIView setAnimationDuration: keyboardAnimationDuration];
-    [UIView setAnimationCurve: animationCurve];
-    CGRect frame = self.view.frame;
-    frame.origin.y += difference/2.15;
-    [self.view setFrame: frame];
-    [UIView commitAnimations];
+    CGFloat difference = endFrame.origin.y - startFrame.origin.y;
+    CGPoint contentOffset = self.scrollView.contentOffset;
+    if (difference > 0) {
+        contentOffset.y = 0;
+    } else if (self.userName.isFirstResponder || self.passWord.isFirstResponder) {
+        contentOffset.y -= difference / 3;
+    }
+    self.scrollView.contentOffset = contentOffset;
 }
 - (IBAction)LoginTapped:(UIButton *)sender {
     NSLog(@"Login Tapped");
     [self.navigationController pushViewController:[[TabBar alloc]init] animated:YES];
+}
+
+-(void) viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.scrollView.contentSize = self.scrollView.frame.size;
+    //self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height+40);
+}
+
+-(void) didRotateFromInterfaceOrientation: (UIInterfaceOrientation)fromInterfaceOrientation {
+    self.scrollView.contentSize = self.scrollView.frame.size;
+    //self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height+40);
 }
 
 @end

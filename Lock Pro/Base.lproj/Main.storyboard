@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -36,51 +37,66 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salto.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ATE-sO-SKW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhN-kS-q2Q">
-                                <rect key="frame" x="172" y="198" width="257" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oXS-D9-zva">
-                                <rect key="frame" x="172" y="276" width="257" height="48"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmM-EX-3d4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhN-kS-q2Q">
+                                        <rect key="frame" x="172" y="190" width="257" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oXS-D9-zva">
+                                        <rect key="frame" x="172" y="276" width="257" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="257" id="eWI-lr-rhW"/>
+                                            <constraint firstAttribute="height" constant="48" id="mU4-mr-0JL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxM-r5-qY4" customClass="UIButton">
+                                        <rect key="frame" x="172" y="360" width="257" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="LoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EyZ-6R-ewg"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="257" id="eWI-lr-rhW"/>
-                                    <constraint firstAttribute="height" constant="48" id="mU4-mr-0JL"/>
+                                    <constraint firstAttribute="bottom" secondItem="nhN-kS-q2Q" secondAttribute="bottom" constant="362" id="1If-KY-xma"/>
+                                    <constraint firstItem="oXS-D9-zva" firstAttribute="height" secondItem="nhN-kS-q2Q" secondAttribute="height" id="Aqa-YC-2JI"/>
+                                    <constraint firstItem="QxM-r5-qY4" firstAttribute="width" secondItem="nhN-kS-q2Q" secondAttribute="width" id="EEl-vz-Bdf"/>
+                                    <constraint firstItem="nhN-kS-q2Q" firstAttribute="trailing" secondItem="oXS-D9-zva" secondAttribute="trailing" id="FYi-Ka-lVd"/>
+                                    <constraint firstItem="nhN-kS-q2Q" firstAttribute="leading" secondItem="oXS-D9-zva" secondAttribute="leading" id="Fq4-f6-AE2"/>
+                                    <constraint firstAttribute="trailing" secondItem="nhN-kS-q2Q" secondAttribute="trailing" constant="171" id="Ojh-cK-ARp"/>
+                                    <constraint firstItem="oXS-D9-zva" firstAttribute="centerY" secondItem="pmM-EX-3d4" secondAttribute="centerY" id="Pf8-9j-Huy"/>
+                                    <constraint firstItem="nhN-kS-q2Q" firstAttribute="trailing" secondItem="QxM-r5-qY4" secondAttribute="trailing" id="ROW-xQ-dE6"/>
+                                    <constraint firstItem="oXS-D9-zva" firstAttribute="top" secondItem="nhN-kS-q2Q" secondAttribute="bottom" constant="38" id="VXI-nj-PFg"/>
+                                    <constraint firstItem="oXS-D9-zva" firstAttribute="centerX" secondItem="pmM-EX-3d4" secondAttribute="centerX" id="XV1-aE-sv8"/>
+                                    <constraint firstItem="QxM-r5-qY4" firstAttribute="height" secondItem="nhN-kS-q2Q" secondAttribute="height" id="e0a-sc-5KH"/>
+                                    <constraint firstItem="nhN-kS-q2Q" firstAttribute="leading" secondItem="QxM-r5-qY4" secondAttribute="leading" id="fdV-oa-Pjg"/>
+                                    <constraint firstItem="oXS-D9-zva" firstAttribute="width" secondItem="nhN-kS-q2Q" secondAttribute="width" id="jiC-Aa-far"/>
+                                    <constraint firstItem="QxM-r5-qY4" firstAttribute="top" secondItem="oXS-D9-zva" secondAttribute="bottom" constant="36" id="pqJ-ry-W4z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxM-r5-qY4" customClass="UIButton">
-                                <rect key="frame" x="172" y="354" width="257" height="48"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="LoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EyZ-6R-ewg"/>
-                                </connections>
-                            </view>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oXS-D9-zva" firstAttribute="width" secondItem="nhN-kS-q2Q" secondAttribute="width" id="3so-KG-hBS"/>
-                            <constraint firstItem="oXS-D9-zva" firstAttribute="top" secondItem="nhN-kS-q2Q" secondAttribute="bottom" constant="30" id="3uu-RJ-uUB"/>
-                            <constraint firstItem="QxM-r5-qY4" firstAttribute="leading" secondItem="oXS-D9-zva" secondAttribute="leading" id="8Qk-vX-rZn"/>
+                            <constraint firstItem="pmM-EX-3d4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9Vu-Xy-RNr"/>
                             <constraint firstItem="ATE-sO-SKW" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="E4D-C7-yYc"/>
-                            <constraint firstItem="oXS-D9-zva" firstAttribute="height" secondItem="nhN-kS-q2Q" secondAttribute="height" id="Hxk-3o-cCz"/>
-                            <constraint firstItem="oXS-D9-zva" firstAttribute="centerY" secondItem="ATE-sO-SKW" secondAttribute="centerY" id="IT2-tA-n1t"/>
-                            <constraint firstItem="QxM-r5-qY4" firstAttribute="height" secondItem="oXS-D9-zva" secondAttribute="height" id="U1R-rf-fTb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pmM-EX-3d4" secondAttribute="trailing" constant="-20" id="JH3-vd-qCk"/>
+                            <constraint firstItem="pmM-EX-3d4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="JTt-mZ-X0Y"/>
                             <constraint firstItem="ATE-sO-SKW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UF5-wE-pBc"/>
-                            <constraint firstItem="QxM-r5-qY4" firstAttribute="trailing" secondItem="oXS-D9-zva" secondAttribute="trailing" id="XGd-4v-bCH"/>
-                            <constraint firstItem="QxM-r5-qY4" firstAttribute="centerX" secondItem="ATE-sO-SKW" secondAttribute="centerX" id="Y8Q-Or-YSF"/>
                             <constraint firstAttribute="trailing" secondItem="ATE-sO-SKW" secondAttribute="trailing" id="cDn-Uc-VuN"/>
-                            <constraint firstItem="QxM-r5-qY4" firstAttribute="top" secondItem="oXS-D9-zva" secondAttribute="bottom" constant="30" id="fCm-e4-tYQ"/>
-                            <constraint firstItem="oXS-D9-zva" firstAttribute="centerX" secondItem="nhN-kS-q2Q" secondAttribute="centerX" id="g2e-Vz-nMC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pmM-EX-3d4" secondAttribute="bottom" id="dxR-Ho-iSa"/>
                             <constraint firstItem="ATE-sO-SKW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hOu-pr-AAm"/>
-                            <constraint firstItem="nhN-kS-q2Q" firstAttribute="centerX" secondItem="ATE-sO-SKW" secondAttribute="centerX" id="hol-Jk-BqI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ioc-Pw-6S7"/>
                     <connections>
                         <outlet property="logIn" destination="QxM-r5-qY4" id="WTC-U6-a3e"/>
                         <outlet property="passWord" destination="oXS-D9-zva" id="U4Q-qW-xcK"/>
+                        <outlet property="scrollView" destination="pmM-EX-3d4" id="JQn-s0-2zC"/>
                         <outlet property="userName" destination="nhN-kS-q2Q" id="yrQ-CQ-XUa"/>
                     </connections>
                 </viewController>
