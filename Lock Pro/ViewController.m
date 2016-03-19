@@ -57,11 +57,13 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self addObservers];
+    [self.navigationController.navigationBar setHidden:YES];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self removeObservers];
+    [self.navigationController.navigationBar setHidden:NO];
 }
 
 -(void) addObservers {
@@ -109,6 +111,22 @@
 }
 - (IBAction)LoginTapped:(UIButton *)sender {
     NSLog(@"Login Tapped");
+    UITabBarController *tabBar = [[UITabBarController alloc]init];
+    UIViewController *vc1 = [[UIViewController alloc]init];
+    vc1.view.backgroundColor = [UIColor lightGrayColor];
+    vc1.title = @"Lock";
+    //vc1.tabBarItem.image = ;
+
+    UIViewController *vc2 = [[UIViewController alloc]init];
+    vc2.view.backgroundColor = [UIColor lightGrayColor];
+    vc2.title = @"Activity";
+
+    NSArray *Controllers = [[NSArray alloc] initWithObjects:
+                            vc1,
+                            vc2, nil];
+    
+    [tabBar setViewControllers:Controllers];
+    [self.navigationController pushViewController:tabBar animated:YES];
 }
 
 @end
