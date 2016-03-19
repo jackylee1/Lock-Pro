@@ -16,14 +16,16 @@
     if (self) {
         UIViewController *vc1 = [[LocksTab alloc]init];//[[UIViewController alloc]init];
         vc1.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
-        vc1.title = @"Locks";
+        vc1.title = @"Doors";
         //vc1.tabBarItem.image = ;
         UIViewController *vc2 = [[UIViewController alloc]init];
         vc2.view.backgroundColor = [UIColor lightGrayColor];
-        vc2.title = @"Activity";
-        NSArray *Controllers = [[NSArray alloc] initWithObjects:
-                                vc1,
-                                vc2, nil];
+        vc2.title = @"Users";
+        UIViewController *vc3 = [[UIViewController alloc]init];
+        vc3.view.backgroundColor = [UIColor lightGrayColor];
+        vc3.title = @"History";
+
+        NSArray *Controllers = [[NSArray alloc] initWithObjects:vc1,vc2,vc3, nil];
         [self setViewControllers:Controllers];
     }
     
