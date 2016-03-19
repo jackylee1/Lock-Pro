@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LocksTab : UITableViewController
+@interface DoorsTab : UITableViewController
 
 @end

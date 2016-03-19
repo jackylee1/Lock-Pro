@@ -15,8 +15,10 @@
 		59AD173C1C9AEDD500FEB73A /* Lock_Pro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59AD173A1C9AEDD500FEB73A /* Lock_Pro.xcdatamodeld */; };
 		59AD173E1C9AEDD500FEB73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AD173D1C9AEDD500FEB73A /* Assets.xcassets */; };
 		59AD17411C9AEDD500FEB73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59AD173F1C9AEDD500FEB73A /* LaunchScreen.storyboard */; };
-		59E57FBD1C9DAB990046E4FA /* LocksTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FBC1C9DAB990046E4FA /* LocksTab.m */; };
+		59E57FBD1C9DAB990046E4FA /* DoorsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FBC1C9DAB990046E4FA /* DoorsTab.m */; };
 		59E57FC01C9DACB90046E4FA /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FBF1C9DACB90046E4FA /* TabBar.m */; };
+		59E57FEC1C9E0C1E0046E4FA /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FEB1C9E0C1E0046E4FA /* NavigationController.m */; };
+		59E57FF01C9E0F1D0046E4FA /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E57FEF1C9E0F1D0046E4FA /* wood.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +34,13 @@
 		59AD173D1C9AEDD500FEB73A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59AD17401C9AEDD500FEB73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59AD17421C9AEDD500FEB73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59E57FBB1C9DAB990046E4FA /* LocksTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocksTab.h; sourceTree = "<group>"; };
-		59E57FBC1C9DAB990046E4FA /* LocksTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocksTab.m; sourceTree = "<group>"; };
+		59E57FBB1C9DAB990046E4FA /* DoorsTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoorsTab.h; sourceTree = "<group>"; };
+		59E57FBC1C9DAB990046E4FA /* DoorsTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoorsTab.m; sourceTree = "<group>"; };
 		59E57FBE1C9DACB90046E4FA /* TabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar.h; sourceTree = "<group>"; };
 		59E57FBF1C9DACB90046E4FA /* TabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar.m; sourceTree = "<group>"; };
+		59E57FEA1C9E0C1E0046E4FA /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		59E57FEB1C9E0C1E0046E4FA /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		59E57FEF1C9E0F1D0046E4FA /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +57,7 @@
 		592837451C9D4F18008F8CB3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				59E57FEF1C9E0F1D0046E4FA /* wood.png */,
 				5928374A1C9D51C8008F8CB3 /* salto.jpg */,
 			);
 			path = Images;
@@ -87,10 +93,12 @@
 				59AD17421C9AEDD500FEB73A /* Info.plist */,
 				59AD173A1C9AEDD500FEB73A /* Lock_Pro.xcdatamodeld */,
 				59AD172E1C9AEDD500FEB73A /* Supporting Files */,
-				59E57FBB1C9DAB990046E4FA /* LocksTab.h */,
-				59E57FBC1C9DAB990046E4FA /* LocksTab.m */,
+				59E57FBB1C9DAB990046E4FA /* DoorsTab.h */,
+				59E57FBC1C9DAB990046E4FA /* DoorsTab.m */,
 				59E57FBE1C9DACB90046E4FA /* TabBar.h */,
 				59E57FBF1C9DACB90046E4FA /* TabBar.m */,
+				59E57FEA1C9E0C1E0046E4FA /* NavigationController.h */,
+				59E57FEB1C9E0C1E0046E4FA /* NavigationController.m */,
 			);
 			path = "Lock Pro";
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59AD17411C9AEDD500FEB73A /* LaunchScreen.storyboard in Resources */,
+				59E57FF01C9E0F1D0046E4FA /* wood.png in Resources */,
 				59AD173E1C9AEDD500FEB73A /* Assets.xcassets in Resources */,
 				59AD17391C9AEDD500FEB73A /* Main.storyboard in Resources */,
 				5928374B1C9D51C8008F8CB3 /* salto.jpg in Resources */,
@@ -175,11 +184,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				59AD17361C9AEDD500FEB73A /* ViewController.m in Sources */,
-				59E57FBD1C9DAB990046E4FA /* LocksTab.m in Sources */,
+				59E57FBD1C9DAB990046E4FA /* DoorsTab.m in Sources */,
 				59AD17331C9AEDD500FEB73A /* AppDelegate.m in Sources */,
 				59E57FC01C9DACB90046E4FA /* TabBar.m in Sources */,
 				59AD173C1C9AEDD500FEB73A /* Lock_Pro.xcdatamodeld in Sources */,
 				59AD17301C9AEDD500FEB73A /* main.m in Sources */,
+				59E57FEC1C9E0C1E0046E4FA /* NavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

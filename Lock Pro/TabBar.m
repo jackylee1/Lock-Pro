@@ -7,14 +7,14 @@
 //
 
 #import "TabBar.h"
-#import "LocksTab.h"
+#import "DoorsTab.h"
 
 @implementation TabBar
 
 -(instancetype)init{
     self = [super init];
     if (self) {
-        UIViewController *vc1 = [[LocksTab alloc]init];//[[UIViewController alloc]init];
+        UIViewController *vc1 = [[DoorsTab alloc]init];//[[UIViewController alloc]init];
         vc1.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
         vc1.title = @"Doors";
         //vc1.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:0];
@@ -35,7 +35,8 @@
         UIViewController *vc4 = [[UIViewController alloc]init];
         vc4.view.backgroundColor = [UIColor lightGrayColor];
         vc4.title = @"Settings";
-        vc4.tabBarItem.image = [UIImage imageNamed:@"settings"];
+        //vc4.tabBarItem.image = [UIImage imageNamed:@"settings"];
+        vc4.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag:0];
 
         NSArray *Controllers = [[NSArray alloc] initWithObjects:vc1,vc2,vc3,vc4, nil];
         [self setViewControllers:Controllers];
@@ -47,11 +48,15 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self.navigationItem setHidesBackButton:YES];
+//    UIImage* tabBarBackground = [UIImage imageNamed:@"wood"];
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:tabBarBackground];
+//    [self.tabBar insertSubview:imageView atIndex:1];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logOut)];
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logOut)];
 }
 
 -(void) logOut{

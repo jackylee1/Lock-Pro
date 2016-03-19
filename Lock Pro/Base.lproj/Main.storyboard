@@ -9,7 +9,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Zk1-mT-BrL">
             <objects>
-                <navigationController id="ohz-x3-A4a" sceneMemberID="viewController">
+                <navigationController id="ohz-x3-A4a" customClass="NavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MMD-kW-tNn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salto.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ATE-sO-SKW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salto.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dPm-vL-JIT">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmM-EX-3d4">
@@ -83,13 +83,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pmM-EX-3d4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9Vu-Xy-RNr"/>
-                            <constraint firstItem="ATE-sO-SKW" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="E4D-C7-yYc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pmM-EX-3d4" secondAttribute="trailing" constant="-20" id="JH3-vd-qCk"/>
                             <constraint firstItem="pmM-EX-3d4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="JTt-mZ-X0Y"/>
-                            <constraint firstItem="ATE-sO-SKW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UF5-wE-pBc"/>
-                            <constraint firstAttribute="trailing" secondItem="ATE-sO-SKW" secondAttribute="trailing" id="cDn-Uc-VuN"/>
+                            <constraint firstAttribute="bottom" secondItem="dPm-vL-JIT" secondAttribute="bottom" id="PTY-qF-42P"/>
+                            <constraint firstItem="dPm-vL-JIT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aZl-OG-snF"/>
+                            <constraint firstItem="dPm-vL-JIT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dMh-pM-3Zb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pmM-EX-3d4" secondAttribute="bottom" id="dxR-Ho-iSa"/>
-                            <constraint firstItem="ATE-sO-SKW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hOu-pr-AAm"/>
+                            <constraint firstAttribute="trailing" secondItem="dPm-vL-JIT" secondAttribute="trailing" id="otT-h6-NVA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ioc-Pw-6S7"/>

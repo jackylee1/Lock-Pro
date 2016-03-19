@@ -16,7 +16,18 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salto.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="83T-nB-ThH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="83T-nB-ThH" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="5qO-eP-xpD"/>
+                            <constraint firstAttribute="trailing" secondItem="83T-nB-ThH" secondAttribute="trailing" id="aTF-zo-f9b"/>
+                            <constraint firstItem="83T-nB-ThH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="dbp-Cb-Gl6"/>
+                            <constraint firstItem="83T-nB-ThH" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="ihu-cD-sbe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +35,7 @@
             <point key="canvasLocation" x="-443" y="72"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="salto.jpg" width="772" height="1030"/>
+    </resources>
 </document>

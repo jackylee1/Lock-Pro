@@ -58,6 +58,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     [self addObservers];
     [self.navigationController.navigationBar setHidden:YES];
 }

@@ -6,13 +6,13 @@
 //  Copyright © 2016 nav. All rights reserved.
 //
 
-#import "LocksTab.h"
+#import "DoorsTab.h"
 
-@interface LocksTab ()
+@interface DoorsTab ()
 
 @end
 
-@implementation LocksTab
+@implementation DoorsTab
 
 - (void)viewDidLoad {
     [super viewDidLoad];
