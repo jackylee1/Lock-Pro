@@ -107,5 +107,8 @@
     [self.view setFrame: frame];
     [UIView commitAnimations];
 }
+- (IBAction)LoginTapped:(UIButton *)sender {
+    NSLog(@"Login Tapped");
+}
 
 @end
