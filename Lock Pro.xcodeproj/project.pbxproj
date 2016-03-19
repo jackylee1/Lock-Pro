@@ -16,6 +16,8 @@
 		59AD173C1C9AEDD500FEB73A /* Lock_Pro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59AD173A1C9AEDD500FEB73A /* Lock_Pro.xcdatamodeld */; };
 		59AD173E1C9AEDD500FEB73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AD173D1C9AEDD500FEB73A /* Assets.xcassets */; };
 		59AD17411C9AEDD500FEB73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59AD173F1C9AEDD500FEB73A /* LaunchScreen.storyboard */; };
+		59E57FBD1C9DAB990046E4FA /* LocksTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FBC1C9DAB990046E4FA /* LocksTab.m */; };
+		59E57FC01C9DACB90046E4FA /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FBF1C9DACB90046E4FA /* TabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		59AD173D1C9AEDD500FEB73A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59AD17401C9AEDD500FEB73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59AD17421C9AEDD500FEB73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59E57FBB1C9DAB990046E4FA /* LocksTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocksTab.h; sourceTree = "<group>"; };
+		59E57FBC1C9DAB990046E4FA /* LocksTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocksTab.m; sourceTree = "<group>"; };
+		59E57FBE1C9DACB90046E4FA /* TabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar.h; sourceTree = "<group>"; };
+		59E57FBF1C9DACB90046E4FA /* TabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,10 @@
 				59AD17421C9AEDD500FEB73A /* Info.plist */,
 				59AD173A1C9AEDD500FEB73A /* Lock_Pro.xcdatamodeld */,
 				59AD172E1C9AEDD500FEB73A /* Supporting Files */,
+				59E57FBB1C9DAB990046E4FA /* LocksTab.h */,
+				59E57FBC1C9DAB990046E4FA /* LocksTab.m */,
+				59E57FBE1C9DACB90046E4FA /* TabBar.h */,
+				59E57FBF1C9DACB90046E4FA /* TabBar.m */,
 			);
 			path = "Lock Pro";
 			sourceTree = "<group>";
@@ -169,7 +179,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59AD17361C9AEDD500FEB73A /* ViewController.m in Sources */,
+				59E57FBD1C9DAB990046E4FA /* LocksTab.m in Sources */,
 				59AD17331C9AEDD500FEB73A /* AppDelegate.m in Sources */,
+				59E57FC01C9DACB90046E4FA /* TabBar.m in Sources */,
 				59AD173C1C9AEDD500FEB73A /* Lock_Pro.xcdatamodeld in Sources */,
 				59AD17301C9AEDD500FEB73A /* main.m in Sources */,
 			);

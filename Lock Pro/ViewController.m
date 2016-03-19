@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TabBar.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userName;
@@ -111,22 +112,7 @@
 }
 - (IBAction)LoginTapped:(UIButton *)sender {
     NSLog(@"Login Tapped");
-    UITabBarController *tabBar = [[UITabBarController alloc]init];
-    UIViewController *vc1 = [[UIViewController alloc]init];
-    vc1.view.backgroundColor = [UIColor lightGrayColor];
-    vc1.title = @"Lock";
-    //vc1.tabBarItem.image = ;
-
-    UIViewController *vc2 = [[UIViewController alloc]init];
-    vc2.view.backgroundColor = [UIColor lightGrayColor];
-    vc2.title = @"Activity";
-
-    NSArray *Controllers = [[NSArray alloc] initWithObjects:
-                            vc1,
-                            vc2, nil];
-    
-    [tabBar setViewControllers:Controllers];
-    [self.navigationController pushViewController:tabBar animated:YES];
+    [self.navigationController pushViewController:[[TabBar alloc]init] animated:YES];
 }
 
 @end
