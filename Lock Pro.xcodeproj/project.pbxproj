@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		592837491C9D50BA008F8CB3 /* door.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 592837481C9D50BA008F8CB3 /* door.jpg */; };
 		5928374B1C9D51C8008F8CB3 /* salto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5928374A1C9D51C8008F8CB3 /* salto.jpg */; };
 		59AD17301C9AEDD500FEB73A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AD172F1C9AEDD500FEB73A /* main.m */; };
 		59AD17331C9AEDD500FEB73A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AD17321C9AEDD500FEB73A /* AppDelegate.m */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		592837481C9D50BA008F8CB3 /* door.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = door.jpg; sourceTree = "<group>"; };
 		5928374A1C9D51C8008F8CB3 /* salto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salto.jpg; sourceTree = "<group>"; };
 		59AD172B1C9AEDD500FEB73A /* Lock Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AD172F1C9AEDD500FEB73A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				5928374A1C9D51C8008F8CB3 /* salto.jpg */,
-				592837481C9D50BA008F8CB3 /* door.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -167,7 +164,6 @@
 				59AD173E1C9AEDD500FEB73A /* Assets.xcassets in Resources */,
 				59AD17391C9AEDD500FEB73A /* Main.storyboard in Resources */,
 				5928374B1C9D51C8008F8CB3 /* salto.jpg in Resources */,
-				592837491C9D50BA008F8CB3 /* door.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
