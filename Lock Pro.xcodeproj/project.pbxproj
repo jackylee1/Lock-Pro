@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		592837491C9D50BA008F8CB3 /* door.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 592837481C9D50BA008F8CB3 /* door.jpg */; };
+		5928374B1C9D51C8008F8CB3 /* salto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5928374A1C9D51C8008F8CB3 /* salto.jpg */; };
 		59AD17301C9AEDD500FEB73A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AD172F1C9AEDD500FEB73A /* main.m */; };
 		59AD17331C9AEDD500FEB73A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AD17321C9AEDD500FEB73A /* AppDelegate.m */; };
 		59AD17361C9AEDD500FEB73A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AD17351C9AEDD500FEB73A /* ViewController.m */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		592837481C9D50BA008F8CB3 /* door.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = door.jpg; sourceTree = "<group>"; };
+		5928374A1C9D51C8008F8CB3 /* salto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salto.jpg; sourceTree = "<group>"; };
 		59AD172B1C9AEDD500FEB73A /* Lock Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AD172F1C9AEDD500FEB73A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59AD17311C9AEDD500FEB73A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		592837451C9D4F18008F8CB3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5928374A1C9D51C8008F8CB3 /* salto.jpg */,
+				592837481C9D50BA008F8CB3 /* door.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		59AD17221C9AEDD500FEB73A = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +73,7 @@
 		59AD172D1C9AEDD500FEB73A /* Lock Pro */ = {
 			isa = PBXGroup;
 			children = (
+				592837451C9D4F18008F8CB3 /* Images */,
 				59AD17311C9AEDD500FEB73A /* AppDelegate.h */,
 				59AD17321C9AEDD500FEB73A /* AppDelegate.m */,
 				59AD17341C9AEDD500FEB73A /* ViewController.h */,
@@ -142,6 +156,8 @@
 				59AD17411C9AEDD500FEB73A /* LaunchScreen.storyboard in Resources */,
 				59AD173E1C9AEDD500FEB73A /* Assets.xcassets in Resources */,
 				59AD17391C9AEDD500FEB73A /* Main.storyboard in Resources */,
+				5928374B1C9D51C8008F8CB3 /* salto.jpg in Resources */,
+				592837491C9D50BA008F8CB3 /* door.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "Lock Pro/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nav.Lock-Pro";
@@ -278,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "Lock Pro/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nav.Lock-Pro";
@@ -304,6 +322,7 @@
 				59AD17471C9AEDD500FEB73A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
