@@ -109,6 +109,7 @@
 }
 - (IBAction)LoginTapped:(UIButton *)sender {
     NSLog(@"Login Tapped");
+    [self.view endEditing:YES];
     [self.navigationController pushViewController:[[TabBar alloc]init] animated:YES];
 }
 
