@@ -20,26 +20,30 @@
         vc1.title = @"Doors";
         //vc1.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:0];
         vc1.tabBarItem.image = [UIImage imageNamed:@"door"];
+        UINavigationController *navBar1 = [[UINavigationController alloc]initWithRootViewController:vc1];
         
         UIViewController *vc2 = [[UIViewController alloc]init];
         vc2.view.backgroundColor = [UIColor lightGrayColor];
         vc2.title = @"Users";
         //vc2.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:0];
         vc2.tabBarItem.image = [UIImage imageNamed:@"users"];
+        UINavigationController *navBar2 = [[UINavigationController alloc]initWithRootViewController:vc2];
 
         UIViewController *vc3 = [[UIViewController alloc]init];
         vc3.view.backgroundColor = [UIColor lightGrayColor];
         vc3.title = @"History";
         //vc3.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:0];
         vc3.tabBarItem.image = [UIImage imageNamed:@"history"];
+        UINavigationController *navBar3 = [[UINavigationController alloc]initWithRootViewController:vc3];
         
         UIViewController *vc4 = [[SettingsTab alloc]init];
         vc4.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
         vc4.title = @"More";
         //vc4.tabBarItem.image = [UIImage imageNamed:@"settings"];
         vc4.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag:0];
+        UINavigationController *navBar4 = [[UINavigationController alloc]initWithRootViewController:vc4];
 
-        NSArray *Controllers = [[NSArray alloc] initWithObjects:vc1,vc2,vc3,vc4, nil];
+        NSArray *Controllers = [[NSArray alloc] initWithObjects:navBar1,navBar2,navBar3,navBar4, nil];
         [self setViewControllers:Controllers];
     }
     

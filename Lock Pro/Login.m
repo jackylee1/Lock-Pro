@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self.navigationController.navigationBar setHidden:YES];
+
     [self.userName setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.5f]];
     [self.userName setTextColor:[UIColor whiteColor]];
     [self.passWord setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.5f]];
@@ -74,13 +76,11 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     [self addObservers];
-    [self.navigationController.navigationBar setHidden:YES];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self removeObservers];
-    [self.navigationController.navigationBar setHidden:NO];
 }
 
 -(void) addObservers {
