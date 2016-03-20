@@ -19,8 +19,8 @@
 		59E57FC01C9DACB90046E4FA /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FBF1C9DACB90046E4FA /* TabBar.m */; };
 		59E57FEC1C9E0C1E0046E4FA /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FEB1C9E0C1E0046E4FA /* NavigationController.m */; };
 		59E57FF01C9E0F1D0046E4FA /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E57FEF1C9E0F1D0046E4FA /* wood.png */; };
-		59E57FF41C9E1D300046E4FA /* SettingsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FF21C9E1D300046E4FA /* SettingsTab.m */; };
-		59E57FF51C9E1D300046E4FA /* SettingsTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E57FF31C9E1D300046E4FA /* SettingsTab.xib */; };
+		59E57FF41C9E1D300046E4FA /* MoreTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FF21C9E1D300046E4FA /* MoreTab.m */; };
+		59E57FF51C9E1D300046E4FA /* MoreTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E57FF31C9E1D300046E4FA /* MoreTab.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +43,9 @@
 		59E57FEA1C9E0C1E0046E4FA /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		59E57FEB1C9E0C1E0046E4FA /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		59E57FEF1C9E0F1D0046E4FA /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood.png; sourceTree = "<group>"; };
-		59E57FF11C9E1D300046E4FA /* SettingsTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTab.h; sourceTree = "<group>"; };
-		59E57FF21C9E1D300046E4FA /* SettingsTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTab.m; sourceTree = "<group>"; };
-		59E57FF31C9E1D300046E4FA /* SettingsTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTab.xib; sourceTree = "<group>"; };
+		59E57FF11C9E1D300046E4FA /* MoreTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTab.h; sourceTree = "<group>"; };
+		59E57FF21C9E1D300046E4FA /* MoreTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTab.m; sourceTree = "<group>"; };
+		59E57FF31C9E1D300046E4FA /* MoreTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTab.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +104,9 @@
 				59E57FBF1C9DACB90046E4FA /* TabBar.m */,
 				59E57FEA1C9E0C1E0046E4FA /* NavigationController.h */,
 				59E57FEB1C9E0C1E0046E4FA /* NavigationController.m */,
-				59E57FF11C9E1D300046E4FA /* SettingsTab.h */,
-				59E57FF21C9E1D300046E4FA /* SettingsTab.m */,
-				59E57FF31C9E1D300046E4FA /* SettingsTab.xib */,
+				59E57FF11C9E1D300046E4FA /* MoreTab.h */,
+				59E57FF21C9E1D300046E4FA /* MoreTab.m */,
+				59E57FF31C9E1D300046E4FA /* MoreTab.xib */,
 			);
 			path = "Lock Pro";
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 				59AD17411C9AEDD500FEB73A /* LaunchScreen.storyboard in Resources */,
 				59E57FF01C9E0F1D0046E4FA /* wood.png in Resources */,
 				590EDFF31C9EC44800E5E3C7 /* Login.xib in Resources */,
-				59E57FF51C9E1D300046E4FA /* SettingsTab.xib in Resources */,
+				59E57FF51C9E1D300046E4FA /* MoreTab.xib in Resources */,
 				59AD173E1C9AEDD500FEB73A /* Assets.xcassets in Resources */,
 				5928374B1C9D51C8008F8CB3 /* salto.jpg in Resources */,
 			);
@@ -192,7 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59E57FF41C9E1D300046E4FA /* SettingsTab.m in Sources */,
+				59E57FF41C9E1D300046E4FA /* MoreTab.m in Sources */,
 				59AD17361C9AEDD500FEB73A /* Login.m in Sources */,
 				59E57FBD1C9DAB990046E4FA /* DoorsTab.m in Sources */,
 				59AD17331C9AEDD500FEB73A /* AppDelegate.m in Sources */,

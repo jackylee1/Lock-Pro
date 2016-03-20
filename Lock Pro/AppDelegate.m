@@ -10,7 +10,6 @@
 #import "Login.h"
 
 @interface AppDelegate ()
-@property(strong, nonatomic) UINavigationController *navBar;
 @property(strong, nonatomic) Login *viewController;
 @end
 

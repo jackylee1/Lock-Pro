@@ -6,13 +6,14 @@
 //  Copyright © 2016 nav. All rights reserved.
 //
 
-#import "SettingsTab.h"
+#import "MoreTab.h"
+#import "AppDelegate.h"
 
-@interface SettingsTab ()
+@interface MoreTab ()
 
 @end
 
-@implementation SettingsTab
+@implementation MoreTab
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,7 +59,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section==1) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+        [appDelegate.navBar popToRootViewControllerAnimated:YES];
     }
 }
 
