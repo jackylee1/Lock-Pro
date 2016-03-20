@@ -6,17 +6,17 @@
 //  Copyright © 2016 nav. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "Login.h"
 #import "TabBar.h"
 
-@interface ViewController ()
+@interface Login ()
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *passWord;
 @property (weak, nonatomic) IBOutlet UIButton *logIn;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
-@implementation ViewController
+@implementation Login
 
 - (void)viewDidLoad {
     [super viewDidLoad];

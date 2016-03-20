@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "Login.h"
 
 @interface AppDelegate ()
-
+@property(strong, nonatomic) UINavigationController *navBar;
+@property(strong, nonatomic) Login *viewController;
 @end
 
 @implementation AppDelegate
@@ -17,6 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.viewController = [[Login alloc]init];
+    self.navBar = [[UINavigationController alloc]init];
+    self.window.rootViewController = self.navBar;
+    [self.navBar pushViewController:self.viewController animated:YES];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
