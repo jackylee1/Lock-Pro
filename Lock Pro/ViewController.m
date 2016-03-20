@@ -24,6 +24,7 @@
     [self.userName setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.5f]];
     [self.userName setTextColor:[UIColor whiteColor]];
     [self.passWord setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.5f]];
+    [self.passWord setTextColor:[UIColor whiteColor]];
     self.userName.layer.borderColor = [[UIColor whiteColor] CGColor];
     self.userName.layer.borderWidth = 1.5;
     self.userName.layer.cornerRadius = 5;
@@ -45,8 +46,21 @@
     self.logIn.layer.cornerRadius = 5;
     self.logIn.alpha = 0.9;
     [self.logIn setTitle:@"Log In" forState:UIControlStateNormal];
+    
+    self.userName.delegate = self;
+    self.passWord.delegate = self;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if ([textField isEqual:self.userName]) {
+        [self.passWord becomeFirstResponder];
+    }else{
+        [self LoginTapped:nil];
+    }
+    
+    return YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

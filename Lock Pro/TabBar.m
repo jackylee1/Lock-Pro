@@ -8,6 +8,7 @@
 
 #import "TabBar.h"
 #import "DoorsTab.h"
+#import "SettingsTab.h"
 
 @implementation TabBar
 
@@ -32,9 +33,9 @@
         //vc3.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:0];
         vc3.tabBarItem.image = [UIImage imageNamed:@"history"];
         
-        UIViewController *vc4 = [[UIViewController alloc]init];
-        vc4.view.backgroundColor = [UIColor lightGrayColor];
-        vc4.title = @"Settings";
+        UIViewController *vc4 = [[SettingsTab alloc]init];
+        vc4.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
+        vc4.title = @"More";
         //vc4.tabBarItem.image = [UIImage imageNamed:@"settings"];
         vc4.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag:0];
 
