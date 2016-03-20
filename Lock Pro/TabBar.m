@@ -21,6 +21,7 @@
         //vc1.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:0];
         vc1.tabBarItem.image = [UIImage imageNamed:@"door"];
         UINavigationController *navBar1 = [[UINavigationController alloc]initWithRootViewController:vc1];
+        //[navBar1.navigationBar setBackgroundImage:[UIImage imageNamed:@"wood"] forBarMetrics:UIBarMetricsDefault];
         
         UIViewController *vc2 = [[UIViewController alloc]init];
         vc2.view.backgroundColor = [UIColor lightGrayColor];
@@ -41,9 +42,8 @@
         vc4.title = @"More";
         //vc4.tabBarItem.image = [UIImage imageNamed:@"settings"];
         vc4.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag:0];
-        UINavigationController *navBar4 = [[UINavigationController alloc]initWithRootViewController:vc4];
 
-        NSArray *Controllers = [[NSArray alloc] initWithObjects:navBar1,navBar2,navBar3,navBar4, nil];
+        NSArray *Controllers = [[NSArray alloc] initWithObjects:navBar1,navBar2,navBar3,vc4, nil];
         [self setViewControllers:Controllers];
     }
     
