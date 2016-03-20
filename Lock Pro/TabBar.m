@@ -15,7 +15,7 @@
 -(instancetype)init{
     self = [super init];
     if (self) {
-        UIViewController *vc1 = [[DoorsTab alloc]init];//[[UIViewController alloc]init];
+        UIViewController *vc1 = [[DoorsTab alloc]initWithStyle:UITableViewStyleGrouped];//[[UIViewController alloc]init];
         vc1.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
         vc1.title = @"Doors";
         //vc1.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:0];
