@@ -8,6 +8,7 @@
 
 #import "TabBar.h"
 #import "DoorsTab.h"
+#import "UsersTab.h"
 #import "MoreTab.h"
 
 @implementation TabBar
@@ -15,7 +16,7 @@
 -(instancetype)init{
     self = [super init];
     if (self) {
-        UIViewController *vc1 = [[DoorsTab alloc]initWithStyle:UITableViewStyleGrouped];//[[UIViewController alloc]init];
+        UIViewController *vc1 = [[DoorsTab alloc]initWithStyle:UITableViewStyleGrouped];
         vc1.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
         vc1.title = @"Doors";
         //vc1.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:0];
@@ -23,15 +24,15 @@
         UINavigationController *navBar1 = [[UINavigationController alloc]initWithRootViewController:vc1];
         //[navBar1.navigationBar setBackgroundImage:[UIImage imageNamed:@"wood"] forBarMetrics:UIBarMetricsDefault];
         
-        UIViewController *vc2 = [[UIViewController alloc]init];
-        vc2.view.backgroundColor = [UIColor lightGrayColor];
+        UIViewController *vc2 = [[UsersTab alloc]initWithStyle:UITableViewStyleGrouped];
+        vc2.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
         vc2.title = @"Users";
         //vc2.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:0];
         vc2.tabBarItem.image = [UIImage imageNamed:@"users"];
         UINavigationController *navBar2 = [[UINavigationController alloc]initWithRootViewController:vc2];
 
         UIViewController *vc3 = [[UIViewController alloc]init];
-        vc3.view.backgroundColor = [UIColor lightGrayColor];
+        vc3.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
         vc3.title = @"History";
         //vc3.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:0];
         vc3.tabBarItem.image = [UIImage imageNamed:@"history"];

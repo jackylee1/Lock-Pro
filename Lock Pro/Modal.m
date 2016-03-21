@@ -9,10 +9,19 @@
 #import "Modal.h"
 
 @interface Modal ()
-@property (weak, nonatomic) IBOutlet UITextField *doorName;
+@property (weak, nonatomic) IBOutlet UITextField *firstTextField;
+@property (strong, nonatomic) NSString *firstPlaceholder;
 @end
 
 @implementation Modal
+
+-(instancetype)initWithPlaceholders:(NSString *) firstPlaceholder{
+    self = [super init];
+    if (self) {
+        self.firstPlaceholder = firstPlaceholder;
+            }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -20,8 +29,9 @@
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneTapped)];
     self.navigationItem.rightBarButtonItem = doneButton;
     self.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
-    self.doorName.delegate = self;
-    [self.doorName becomeFirstResponder];
+    self.firstTextField.delegate = self;
+    self.firstTextField.placeholder = self.firstPlaceholder;
+    [self.firstTextField becomeFirstResponder];
     [self.view layoutIfNeeded];
 }
 
@@ -35,7 +45,7 @@
     Modal __weak *weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self dismissViewControllerAnimated:YES completion:^{
-            [weakSelf.delegate doneTapped:weakSelf.doorName.text];
+            [weakSelf.delegate doneTapped:weakSelf.firstTextField.text];
         }];
     });
 

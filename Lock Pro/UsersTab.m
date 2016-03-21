@@ -1,19 +1,18 @@
 //
-//  LocksTab.m
+//  UsersTab.m
 //  Lock Pro
 //
-//  Created by Nav on 3/19/16.
+//  Created by Nav on 3/21/16.
 //  Copyright © 2016 nav. All rights reserved.
 //
-
-#import "DoorsTab.h"
+#import "UsersTab.h"
 #import "AppDelegate.h"
 
-@interface DoorsTab ()
+@interface UsersTab ()
 
 @end
 
-@implementation DoorsTab
+@implementation UsersTab
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,29 +32,29 @@
 }
 
 -(void)doneTapped:(NSString *)name {
-    if ([name length]>0) {   
-     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-     
-     // If appropriate, configure the new managed object.
-     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-     [newManagedObject setValue:name forKey:@"name"];
-     
-     // Save the context.
-     NSError *error = nil;
-     if (![context save:&error]) {
-     // Replace this implementation with code to handle the error appropriately.
-     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-     NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-     abort();
-     }
-  }
+    if ([name length]>0) {
+        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+        NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+        
+        // If appropriate, configure the new managed object.
+        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+        [newManagedObject setValue:name forKey:@"name"];
+        
+        // Save the context.
+        NSError *error = nil;
+        if (![context save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
 }
 
 - (void)insertNewObject:(id)sender {
     UINavigationController *modalNavbar = [[UINavigationController alloc]init];
-    Modal *modal = [[Modal alloc]initWithPlaceholders:@"Enter Door Name"];
+    Modal *modal = [[Modal alloc]initWithPlaceholders:@"Enter User Name"];
     modal.delegate = self;
     modal.modalPresentationStyle = UIModalPresentationFormSheet;
     modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
@@ -85,7 +84,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section==0) {
-    return 3;
+        return 3;
     }
     return 1;
 }
@@ -105,7 +104,7 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Doors" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Users" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
@@ -118,7 +117,7 @@
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"name" cacheName:@"DoorsCache"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"name" cacheName:@"UsersCache"];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
@@ -216,49 +215,5 @@
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

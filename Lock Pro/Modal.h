@@ -16,4 +16,6 @@
 
 @interface Modal : UIViewController<UITextFieldDelegate>
 @property (weak, nonatomic) id<ModalDelegate> delegate;
+-(instancetype)initWithPlaceholders:(NSString *) firstPlaceholder;
+
 @end
