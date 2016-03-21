@@ -10,6 +10,7 @@
 #import "DoorsTab.h"
 #import "UsersTab.h"
 #import "MoreTab.h"
+#import "HistoryTab.h"
 
 @implementation TabBar
 
@@ -32,7 +33,7 @@
         vc2.tabBarItem.image = [UIImage imageNamed:@"users"];
         UINavigationController *navBar2 = [[UINavigationController alloc]initWithRootViewController:vc2];
 
-        UIViewController *vc3 = [[UIViewController alloc]init];
+        UIViewController *vc3 = [[HistoryTab alloc]initWithStyle:UITableViewStyleGrouped];
         vc3.view.backgroundColor = backgroundColor;
         vc3.title = @"History";
         //vc3.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:0];

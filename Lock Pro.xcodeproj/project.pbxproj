@@ -25,6 +25,7 @@
 		59E57FF01C9E0F1D0046E4FA /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E57FEF1C9E0F1D0046E4FA /* wood.png */; };
 		59E57FF41C9E1D300046E4FA /* MoreTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FF21C9E1D300046E4FA /* MoreTab.m */; };
 		59E57FF51C9E1D300046E4FA /* MoreTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E57FF31C9E1D300046E4FA /* MoreTab.xib */; };
+		59E8C9401CA03396009EE8BF /* HistoryTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E8C93F1CA03396009EE8BF /* HistoryTab.m */; };
 		59F227911CA00F3E0006EC43 /* DoorOpenCloseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F227901CA00F3E0006EC43 /* DoorOpenCloseViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		59E57FF11C9E1D300046E4FA /* MoreTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTab.h; sourceTree = "<group>"; };
 		59E57FF21C9E1D300046E4FA /* MoreTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTab.m; sourceTree = "<group>"; };
 		59E57FF31C9E1D300046E4FA /* MoreTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTab.xib; sourceTree = "<group>"; };
+		59E8C93E1CA03396009EE8BF /* HistoryTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTab.h; sourceTree = "<group>"; };
+		59E8C93F1CA03396009EE8BF /* HistoryTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTab.m; sourceTree = "<group>"; };
 		59F2278F1CA00F3E0006EC43 /* DoorOpenCloseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoorOpenCloseViewController.h; sourceTree = "<group>"; };
 		59F227901CA00F3E0006EC43 /* DoorOpenCloseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoorOpenCloseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +131,8 @@
 				59F2278F1CA00F3E0006EC43 /* DoorOpenCloseViewController.h */,
 				59F227901CA00F3E0006EC43 /* DoorOpenCloseViewController.m */,
 				5918DF3C1CA000E500EB3E68 /* DoorOpenCloseViewController.xib */,
+				59E8C93E1CA03396009EE8BF /* HistoryTab.h */,
+				59E8C93F1CA03396009EE8BF /* HistoryTab.m */,
 			);
 			path = "Lock Pro";
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				59AD173C1C9AEDD500FEB73A /* Lock_Pro.xcdatamodeld in Sources */,
 				5991F0821C9EEEBE006472CF /* Modal.m in Sources */,
 				59AD17301C9AEDD500FEB73A /* main.m in Sources */,
+				59E8C9401CA03396009EE8BF /* HistoryTab.m in Sources */,
 				5918DF381C9FE3C100EB3E68 /* UsersTab.m in Sources */,
 				59F227911CA00F3E0006EC43 /* DoorOpenCloseViewController.m in Sources */,
 				59E57FEC1C9E0C1E0046E4FA /* NavigationController.m in Sources */,
