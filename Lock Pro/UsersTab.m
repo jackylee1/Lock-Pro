@@ -31,8 +31,8 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
--(void)doneTapped:(NSString *)name {
-    if ([name length]>0) {
+-(void)doneTappedWithFirstFieldAs:(NSString *)name andSecoondFieldAs:(NSString *)type {
+    if ([name length]>0 & [type length]>0) {
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
         NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
@@ -40,6 +40,7 @@
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
         [newManagedObject setValue:name forKey:@"name"];
+        [newManagedObject setValue:type forKey:@"type"];
         
         // Save the context.
         NSError *error = nil;
@@ -54,7 +55,7 @@
 
 - (void)insertNewObject:(id)sender {
     UINavigationController *modalNavbar = [[UINavigationController alloc]init];
-    Modal *modal = [[Modal alloc]initWithPlaceholders:@"Enter User Name"];
+    Modal *modal = [[Modal alloc]initWithPlaceholders:@"Enter User Name"andShowPickerView:YES];
     modal.delegate = self;
     modal.modalPresentationStyle = UIModalPresentationFormSheet;
     modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
@@ -84,13 +85,17 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section==0) {
-        return 3;
+        return 30;
     }
-    return 1;
+    return 15;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 1;
+    return 15;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+  return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
 }
 
 #pragma mark - Fetched results controller
@@ -117,7 +122,7 @@
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"name" cacheName:@"UsersCache"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"type" cacheName:@"UsersCache"];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     

@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Modal">
             <connections>
                 <outlet property="firstTextField" destination="FMv-LB-4qA" id="u3j-Jy-DRF"/>
+                <outlet property="pickerField" destination="Cth-wy-1ry" id="GmM-px-AYp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMv-LB-4qA">
-                    <rect key="frame" x="172" y="127" width="257" height="43"/>
+                    <rect key="frame" x="172" y="134" width="257" height="43"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="BDa-0l-vaQ"/>
                         <constraint firstAttribute="width" constant="257" id="ohd-PE-rZh"/>
@@ -25,11 +26,21 @@
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
                 </textField>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cth-wy-1ry">
+                    <rect key="frame" x="-8" y="157" width="600" height="216"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="iHU-oI-rAk"/>
+                        <outlet property="delegate" destination="-1" id="CMk-Ug-wcx"/>
+                    </connections>
+                </pickerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Cth-wy-1ry" secondAttribute="trailing" constant="8" id="Gcj-xi-pK8"/>
                 <constraint firstItem="FMv-LB-4qA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="0.5" id="ZIF-W6-wy2"/>
-                <constraint firstItem="FMv-LB-4qA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="127" id="cgX-9y-GjI"/>
+                <constraint firstItem="Cth-wy-1ry" firstAttribute="top" secondItem="FMv-LB-4qA" secondAttribute="bottom" constant="-20" id="aY3-Z5-EYo"/>
+                <constraint firstItem="FMv-LB-4qA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="134" id="cgX-9y-GjI"/>
+                <constraint firstItem="Cth-wy-1ry" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-8" id="gia-Zv-3Qj"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
         </view>

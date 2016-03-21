@@ -32,8 +32,8 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
--(void)doneTapped:(NSString *)name {
-    if ([name length]>0) {   
+-(void)doneTappedWithFirstFieldAs:(NSString *)name andSecoondFieldAs:(NSString *)type {
+    if ([name length]>0) {
      NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
      NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
      NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
@@ -55,7 +55,7 @@
 
 - (void)insertNewObject:(id)sender {
     UINavigationController *modalNavbar = [[UINavigationController alloc]init];
-    Modal *modal = [[Modal alloc]initWithPlaceholders:@"Enter Door Name"];
+    Modal *modal = [[Modal alloc]initWithPlaceholders:@"Enter Door Name"andShowPickerView:NO];
     modal.delegate = self;
     modal.modalPresentationStyle = UIModalPresentationFormSheet;
     modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;

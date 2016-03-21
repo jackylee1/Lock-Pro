@@ -10,12 +10,12 @@
 
 @protocol ModalDelegate <NSObject>
 
--(void) doneTapped:(NSString *) name;
+-(void) doneTappedWithFirstFieldAs:(NSString *) name andSecoondFieldAs:(NSString *) type;
 
 @end
 
-@interface Modal : UIViewController<UITextFieldDelegate>
+@interface Modal : UIViewController<UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 @property (weak, nonatomic) id<ModalDelegate> delegate;
--(instancetype)initWithPlaceholders:(NSString *) firstPlaceholder;
+-(instancetype)initWithPlaceholders:(NSString *) firstPlaceholder andShowPickerView:(BOOL) showPicker;
 
 @end
