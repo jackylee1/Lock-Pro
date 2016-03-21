@@ -22,11 +22,20 @@
     [self.openDoor setBackgroundColor:[UIColor colorWithRed:0.086 green:0.494 blue:0.984 alpha:1.00]];
     [self.openDoor setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.openDoor.alpha = 0.9;
+    self.openDoor.layer.shadowRadius = 3.0f;
+    self.openDoor.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.openDoor.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
+    self.openDoor.layer.shadowOpacity = 0.5f;
     
-    self.closeDoor.layer.borderColor = [[UIColor colorWithRed:0.086 green:0.494 blue:0.984 alpha:1.00] CGColor];
-    self.closeDoor.layer.borderWidth = 1.5;
+    [self.closeDoor setBackgroundColor:[UIColor whiteColor]];
+    self.closeDoor.layer.borderColor = [[UIColor clearColor] CGColor];//[[UIColor colorWithRed:0.086 green:0.494 blue:0.984 alpha:1.00] CGColor];
+    self.closeDoor.layer.borderWidth = 0.9;
     self.closeDoor.layer.cornerRadius = self.closeDoor.bounds.size.width / 2.0;
     self.closeDoor.alpha = 0.9;
+    self.closeDoor.layer.shadowRadius = 3.0f;
+    self.closeDoor.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.closeDoor.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
+    self.closeDoor.layer.shadowOpacity = 0.5f;
 }
 
 - (void)didReceiveMemoryWarning {
