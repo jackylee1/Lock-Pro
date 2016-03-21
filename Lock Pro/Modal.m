@@ -30,8 +30,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneTapped)];
+    UIBarButtonItem *doneButton;
+    if (_showPicker) {
+        doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStyleDone target:self action:@selector(doneTapped)];
+        self.firstTextField.returnKeyType = UIReturnKeySend;
+    }else{
+        doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneTapped)];
+        self.firstTextField.returnKeyType = UIReturnKeyDone;
+    }
     self.navigationItem.rightBarButtonItem = doneButton;
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelTapped)];
+    self.navigationItem.leftBarButtonItem = cancelButton;
     self.view.backgroundColor = [UIColor colorWithRed:0.937 green:0.937 blue:0.957 alpha:1.00];
     self.firstTextField.delegate = self;
     self.firstTextField.placeholder = self.firstPlaceholder;
@@ -41,6 +50,14 @@
         [self.pickerField setHidden:YES];
     }
     [self.view layoutIfNeeded];
+}
+
+-(void) cancelTapped {
+    [self.view endEditing:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self dismissViewControllerAnimated:YES completion:^{
+        }];
+    });
 }
 
 - (void)didReceiveMemoryWarning {
