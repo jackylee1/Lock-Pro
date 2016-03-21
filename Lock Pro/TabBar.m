@@ -16,8 +16,9 @@
 -(instancetype)init{
     self = [super init];
     if (self) {
+        UIColor *backgroundColor = [UIColor colorWithRed:0.937 green:0.937 blue:0.957 alpha:1.00];
         UIViewController *vc1 = [[DoorsTab alloc]initWithStyle:UITableViewStyleGrouped];
-        vc1.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
+        vc1.view.backgroundColor = backgroundColor;
         vc1.title = @"Doors";
         //vc1.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:0];
         vc1.tabBarItem.image = [UIImage imageNamed:@"door"];
@@ -25,21 +26,21 @@
         //[navBar1.navigationBar setBackgroundImage:[UIImage imageNamed:@"wood"] forBarMetrics:UIBarMetricsDefault];
         
         UIViewController *vc2 = [[UsersTab alloc]initWithStyle:UITableViewStyleGrouped];
-        vc2.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
+        vc2.view.backgroundColor = backgroundColor;
         vc2.title = @"Users";
         //vc2.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:0];
         vc2.tabBarItem.image = [UIImage imageNamed:@"users"];
         UINavigationController *navBar2 = [[UINavigationController alloc]initWithRootViewController:vc2];
 
         UIViewController *vc3 = [[UIViewController alloc]init];
-        vc3.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
+        vc3.view.backgroundColor = backgroundColor;
         vc3.title = @"History";
         //vc3.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:0];
         vc3.tabBarItem.image = [UIImage imageNamed:@"history"];
         UINavigationController *navBar3 = [[UINavigationController alloc]initWithRootViewController:vc3];
         
         UIViewController *vc4 = [[MoreTab alloc]init];
-        vc4.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
+        vc4.view.backgroundColor = backgroundColor;
         vc4.title = @"More";
         //vc4.tabBarItem.image = [UIImage imageNamed:@"settings"];
         vc4.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag:0];

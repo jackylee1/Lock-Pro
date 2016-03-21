@@ -28,7 +28,7 @@
     // Do any additional setup after loading the view from its nib.
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneTapped)];
     self.navigationItem.rightBarButtonItem = doneButton;
-    self.view.backgroundColor = [UIColor colorWithRed:0.945 green:0.945 blue:0.945 alpha:1.00];
+    self.view.backgroundColor = [UIColor colorWithRed:0.937 green:0.937 blue:0.957 alpha:1.00];
     self.firstTextField.delegate = self;
     self.firstTextField.placeholder = self.firstPlaceholder;
     [self.firstTextField becomeFirstResponder];

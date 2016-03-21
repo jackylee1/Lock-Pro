@@ -48,12 +48,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuse" forIndexPath:indexPath];
     cell.textLabel.textColor = [UIColor darkGrayColor];
     if (indexPath.section ==1) {
-        cell.textLabel.text = @"Log Out  ";
+        cell.textLabel.text = @"Log Out";
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.textColor = [UIColor colorWithRed:0.863 green:0.325 blue:0.290 alpha:1.00];
     }else{
         cell.textLabel.text = @"Contact Info";
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
     }
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
 }
 
