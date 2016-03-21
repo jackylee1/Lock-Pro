@@ -11,6 +11,7 @@
 @interface DoorOpenCloseViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *openDoor;
 @property (weak, nonatomic) IBOutlet UIButton *closeDoor;
+@property (strong, nonatomic) UIActivityIndicatorView *activiytIndicator;
 @end
 
 @implementation DoorOpenCloseViewController
@@ -38,19 +39,52 @@
     self.closeDoor.layer.shadowOpacity = 0.5f;
 }
 
+-(UIActivityIndicatorView *)activiytIndicator {
+    if (_activiytIndicator) {
+        return _activiytIndicator;
+    }else{
+        self.activiytIndicator = [[UIActivityIndicatorView alloc]initWithFrame:self.view.bounds];
+        [self.view addSubview:self.activiytIndicator];
+        return _activiytIndicator;
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) showProgress {
+    self.activiytIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    self.activiytIndicator.backgroundColor = [UIColor colorWithRed:0.937 green:0.937 blue:0.957 alpha:1.00];
+    self.activiytIndicator.color = [UIColor darkGrayColor];
+    [self.activiytIndicator startAnimating];
+    DoorOpenCloseViewController __weak *weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (weakSelf.activiytIndicator) {
+                [weakSelf.activiytIndicator stopAnimating];
+                [weakSelf.activiytIndicator removeFromSuperview];
+                weakSelf.activiytIndicator = nil;
+            }
+        });
+    });
 }
-*/
+
+- (IBAction)openTapped:(id)sender {
+    [self showProgress];
+}
+
+- (IBAction)closeTapped:(id)sender {
+    [self showProgress];
+}
+
+-(void)dealloc{
+    if (_activiytIndicator) {
+        [_activiytIndicator stopAnimating];
+        [_activiytIndicator removeFromSuperview];
+        _activiytIndicator = nil;
+    }
+}
 
 @end

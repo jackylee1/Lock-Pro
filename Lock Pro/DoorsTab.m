@@ -224,6 +224,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     DoorOpenCloseViewController *vc = [[DoorOpenCloseViewController alloc]init];
+    vc.title = [[self.fetchedResultsController objectAtIndexPath:indexPath] name];
     [self.navigationController pushViewController:vc animated:YES];
     
 }

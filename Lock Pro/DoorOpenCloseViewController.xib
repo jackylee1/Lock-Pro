@@ -25,11 +25,17 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                     <state key="normal" title="Close Door"/>
+                    <connections>
+                        <action selector="closeTapped:" destination="-1" eventType="touchUpInside" id="D6E-FS-yfk"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MP-8E-9oK">
                     <rect key="frame" x="234" y="137" width="133" height="133"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                     <state key="normal" title="Open Door"/>
+                    <connections>
+                        <action selector="openTapped:" destination="-1" eventType="touchUpInside" id="CZr-5m-T0J"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
