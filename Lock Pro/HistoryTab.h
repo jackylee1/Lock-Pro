@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "Modal.h"
 
-@interface HistoryTab : UITableViewController<NSFetchedResultsControllerDelegate, ModalDelegate>
+@interface HistoryTab : UITableViewController<NSFetchedResultsControllerDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "DoorOpenCloseViewController.h"
+#import <CoreData/CoreData.h>
+#import "AppDelegate.h"
 
 @interface DoorOpenCloseViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *openDoor;
@@ -73,6 +75,28 @@
 
 - (IBAction)openTapped:(id)sender {
     [self showProgress];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+
+    // Edit the entity name as appropriate.
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"History" inManagedObjectContext:context];
+    
+    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+    
+    // If appropriate, configure the new managed object.
+    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+    [newManagedObject setValue:@"xxx" forKey:@"who"];
+    
+    // Save the context.
+    NSError *error = nil;
+    if (![context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
 }
 
 - (IBAction)closeTapped:(id)sender {
