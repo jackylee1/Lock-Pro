@@ -21,7 +21,7 @@
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -88,7 +88,7 @@
     }
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-
+    
     // Edit the entity name as appropriate.
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"History" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
@@ -97,7 +97,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"who" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"time" ascending:NO];
     
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
     
@@ -193,15 +193,32 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"who"] description];
+    
+    NSString *openclosed;
+    if ([[object valueForKey:@"openclose"] isEqual:[NSNumber numberWithBool:YES]]) {
+        openclosed = @"opened";
+    }else{
+        openclosed = @"closed";
+    }
+    NSString *who = [[object valueForKey:@"who"] description];
+    NSString *string = [NSString stringWithFormat:@"%@ %@ door",who,openclosed];
+    cell.textLabel.text = string;
+    NSDate *date = [object valueForKey:@"time"];
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    format.dateFormat = @"dd/MM/yyyy hh:mm a";
+    cell.detailTextLabel.text = [format stringFromDate:date];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Cell"];// forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+    }
     [self configureCell:cell atIndexPath:indexPath];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     cell.backgroundColor = [[UIColor colorWithRed:0.965 green:0.961 blue:0.965 alpha:1.00] colorWithAlphaComponent:0.3];
     cell.textLabel.textColor = [UIColor darkGrayColor];
+    cell.detailTextLabel.textColor = [UIColor darkGrayColor];
 //Shutter effect
 //    cell.backgroundColor = [[UIColor colorWithRed:0.965 green:0.961 blue:0.965 alpha:1.00] colorWithAlphaComponent:1];
 //    cell.textLabel.textColor = [UIColor darkGrayColor];

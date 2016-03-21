@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @interface DoorOpenCloseViewController : UIViewController
-
+@property(weak,nonatomic) NSManagedObject *object;
 @end

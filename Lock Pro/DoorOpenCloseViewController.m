@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *openDoor;
 @property (weak, nonatomic) IBOutlet UIButton *closeDoor;
 @property (strong, nonatomic) UIActivityIndicatorView *activiytIndicator;
+@property (assign, nonatomic) BOOL openclose;
 @end
 
 @implementation DoorOpenCloseViewController
@@ -73,21 +74,18 @@
     });
 }
 
-- (IBAction)openTapped:(id)sender {
-    [self showProgress];
-    
+-(void) saveData {
+    NSString *name = [[self.object valueForKey:@"name"] description];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-
     // Edit the entity name as appropriate.
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"History" inManagedObjectContext:context];
-    
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:@"xxx" forKey:@"who"];
+    [newManagedObject setValue:name forKey:@"who"];
+    [newManagedObject setValue:[NSDate date] forKey:@"time"];
+    [newManagedObject setValue:[NSNumber numberWithBool:self.openclose] forKey:@"openclose"];
     
     // Save the context.
     NSError *error = nil;
@@ -98,9 +96,16 @@
         abort();
     }
 }
+- (IBAction)openTapped:(id)sender {
+    [self showProgress];
+    self.openclose = YES;
+    [self saveData];
+}
 
 - (IBAction)closeTapped:(id)sender {
     [self showProgress];
+    self.openclose = NO;
+    [self saveData];
 }
 
 -(void)dealloc{
