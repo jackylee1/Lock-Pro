@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		590EDFF31C9EC44800E5E3C7 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590EDFF11C9EC44800E5E3C7 /* Login.xib */; };
 		5918DF381C9FE3C100EB3E68 /* UsersTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 5918DF361C9FE3C100EB3E68 /* UsersTab.m */; };
+		5918DF3E1CA000E500EB3E68 /* DoorOpenCloseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5918DF3C1CA000E500EB3E68 /* DoorOpenCloseViewController.xib */; };
 		5928374B1C9D51C8008F8CB3 /* salto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5928374A1C9D51C8008F8CB3 /* salto.jpg */; };
 		5991F0821C9EEEBE006472CF /* Modal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5991F0801C9EEEBE006472CF /* Modal.m */; };
 		5991F0831C9EEEBE006472CF /* Modal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5991F0811C9EEEBE006472CF /* Modal.xib */; };
@@ -24,12 +25,14 @@
 		59E57FF01C9E0F1D0046E4FA /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E57FEF1C9E0F1D0046E4FA /* wood.png */; };
 		59E57FF41C9E1D300046E4FA /* MoreTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E57FF21C9E1D300046E4FA /* MoreTab.m */; };
 		59E57FF51C9E1D300046E4FA /* MoreTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E57FF31C9E1D300046E4FA /* MoreTab.xib */; };
+		59F227911CA00F3E0006EC43 /* DoorOpenCloseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F227901CA00F3E0006EC43 /* DoorOpenCloseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		590EDFF11C9EC44800E5E3C7 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		5918DF351C9FE3C100EB3E68 /* UsersTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersTab.h; sourceTree = "<group>"; };
 		5918DF361C9FE3C100EB3E68 /* UsersTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersTab.m; sourceTree = "<group>"; };
+		5918DF3C1CA000E500EB3E68 /* DoorOpenCloseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoorOpenCloseViewController.xib; sourceTree = "<group>"; };
 		5928374A1C9D51C8008F8CB3 /* salto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salto.jpg; sourceTree = "<group>"; };
 		5991F07F1C9EEEBE006472CF /* Modal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Modal.h; sourceTree = "<group>"; };
 		5991F0801C9EEEBE006472CF /* Modal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Modal.m; sourceTree = "<group>"; };
@@ -54,6 +57,8 @@
 		59E57FF11C9E1D300046E4FA /* MoreTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTab.h; sourceTree = "<group>"; };
 		59E57FF21C9E1D300046E4FA /* MoreTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTab.m; sourceTree = "<group>"; };
 		59E57FF31C9E1D300046E4FA /* MoreTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTab.xib; sourceTree = "<group>"; };
+		59F2278F1CA00F3E0006EC43 /* DoorOpenCloseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoorOpenCloseViewController.h; sourceTree = "<group>"; };
+		59F227901CA00F3E0006EC43 /* DoorOpenCloseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoorOpenCloseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +125,9 @@
 				5991F0811C9EEEBE006472CF /* Modal.xib */,
 				5918DF351C9FE3C100EB3E68 /* UsersTab.h */,
 				5918DF361C9FE3C100EB3E68 /* UsersTab.m */,
+				59F2278F1CA00F3E0006EC43 /* DoorOpenCloseViewController.h */,
+				59F227901CA00F3E0006EC43 /* DoorOpenCloseViewController.m */,
+				5918DF3C1CA000E500EB3E68 /* DoorOpenCloseViewController.xib */,
 			);
 			path = "Lock Pro";
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 				5991F0831C9EEEBE006472CF /* Modal.xib in Resources */,
 				59AD17411C9AEDD500FEB73A /* LaunchScreen.storyboard in Resources */,
 				59E57FF01C9E0F1D0046E4FA /* wood.png in Resources */,
+				5918DF3E1CA000E500EB3E68 /* DoorOpenCloseViewController.xib in Resources */,
 				590EDFF31C9EC44800E5E3C7 /* Login.xib in Resources */,
 				59E57FF51C9E1D300046E4FA /* MoreTab.xib in Resources */,
 				59AD173E1C9AEDD500FEB73A /* Assets.xcassets in Resources */,
@@ -215,6 +224,7 @@
 				5991F0821C9EEEBE006472CF /* Modal.m in Sources */,
 				59AD17301C9AEDD500FEB73A /* main.m in Sources */,
 				5918DF381C9FE3C100EB3E68 /* UsersTab.m in Sources */,
+				59F227911CA00F3E0006EC43 /* DoorOpenCloseViewController.m in Sources */,
 				59E57FEC1C9E0C1E0046E4FA /* NavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
