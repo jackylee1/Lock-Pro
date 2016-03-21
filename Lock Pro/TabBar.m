@@ -16,7 +16,7 @@
 -(instancetype)init{
     self = [super init];
     if (self) {
-        UIColor *backgroundColor = [UIColor colorWithRed:0.937 green:0.937 blue:0.957 alpha:1.00];
+        UIColor *backgroundColor = [UIColor whiteColor];//[UIColor colorWithRed:0.937 green:0.937 blue:0.957 alpha:1.00];
         UIViewController *vc1 = [[DoorsTab alloc]initWithStyle:UITableViewStyleGrouped];
         vc1.view.backgroundColor = backgroundColor;
         vc1.title = @"Doors";

@@ -50,12 +50,14 @@
     if (indexPath.section ==1) {
         cell.textLabel.text = @"Log Out";
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        cell.textLabel.textColor = [UIColor colorWithRed:0.863 green:0.325 blue:0.290 alpha:1.00];
+        cell.textLabel.textColor = [UIColor colorWithRed:0.863 green:0.325 blue:0.290 alpha:0.9];
     }else{
         cell.textLabel.text = @"Contact Info";
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        cell.textLabel.textColor = [UIColor darkGrayColor];
     }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    cell.backgroundColor = [[UIColor colorWithRed:0.965 green:0.961 blue:0.965 alpha:1.00] colorWithAlphaComponent:0.3];
     return cell;
 }
 
