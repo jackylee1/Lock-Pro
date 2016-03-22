@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ALAlertBanner.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Lock Pro.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>295604A79969ABD15A7E51DAFFA6CD31</key>
+		<key>1CB63AFAAFF4B593D0E9120CA9A9F10A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>77C8B2DC2604C22F04B0112793E437DA</key>
+		<key>3F85959FB32C41D774AAC3986CBEA991</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A9BAD86436BA76FABB2A99712B58774</key>
 		<dict>
 			<key>primary</key>
 			<true/>

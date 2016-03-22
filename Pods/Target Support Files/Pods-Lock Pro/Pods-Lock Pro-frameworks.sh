@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Lock Pro/ALAlertBanner.framework"
   install_framework "Pods-Lock Pro/XLForm.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Lock Pro/ALAlertBanner.framework"
   install_framework "Pods-Lock Pro/XLForm.framework"
 fi

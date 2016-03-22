@@ -1,10 +1,13 @@
 PODS:
+  - ALAlertBanner (0.3.1)
   - XLForm (3.1.1)
 
 DEPENDENCIES:
+  - ALAlertBanner (~> 0.3.1)
   - XLForm (~> 3.1.1)
 
 SPEC CHECKSUMS:
+  ALAlertBanner: 08d82be509cd9b70c4ac0ee1e7ac250003a8b34b
   XLForm: c9ee7e0f859341279bfd894f9589a9d25c23e4df
 
 COCOAPODS: 0.39.0

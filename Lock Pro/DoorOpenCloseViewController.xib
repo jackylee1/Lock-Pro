@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnm-5z-eq6">
-                    <rect key="frame" x="233.5" y="322" width="133" height="133"/>
+                    <rect key="frame" x="234" y="331.5" width="133" height="133"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="133" id="v2u-7R-D7C"/>
                         <constraint firstAttribute="width" constant="133" id="ztv-lb-Gaf"/>
@@ -30,7 +30,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MP-8E-9oK">
-                    <rect key="frame" x="234" y="137" width="133" height="133"/>
+                    <rect key="frame" x="234" y="146.5" width="133" height="133"/>
                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                     <state key="normal" title="Open"/>
                     <connections>
@@ -43,7 +43,7 @@
                 <constraint firstItem="9MP-8E-9oK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2rf-vO-jZc"/>
                 <constraint firstItem="Pnm-5z-eq6" firstAttribute="top" secondItem="9MP-8E-9oK" secondAttribute="bottom" constant="52" id="3lI-LL-Zem"/>
                 <constraint firstItem="9MP-8E-9oK" firstAttribute="height" secondItem="Pnm-5z-eq6" secondAttribute="height" id="BgC-2a-WW6"/>
-                <constraint firstItem="9MP-8E-9oK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-96" id="CCr-G4-goY"/>
+                <constraint firstItem="9MP-8E-9oK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-87" id="CCr-G4-goY"/>
                 <constraint firstItem="Pnm-5z-eq6" firstAttribute="centerX" secondItem="9MP-8E-9oK" secondAttribute="centerX" id="CNR-R4-bmk"/>
                 <constraint firstItem="9MP-8E-9oK" firstAttribute="width" secondItem="Pnm-5z-eq6" secondAttribute="width" id="Dhw-h6-XR0"/>
             </constraints>

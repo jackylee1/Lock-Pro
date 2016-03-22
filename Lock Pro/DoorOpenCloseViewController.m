@@ -9,6 +9,7 @@
 #import "DoorOpenCloseViewController.h"
 #import <CoreData/CoreData.h>
 #import "AppDelegate.h"
+#import <ALAlertBanner/ALAlertBanner.h>
 
 @interface DoorOpenCloseViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *openDoor;
@@ -77,6 +78,19 @@
                 [weakSelf.activiytIndicator stopAnimating];
                 [weakSelf.activiytIndicator removeFromSuperview];
                 weakSelf.activiytIndicator = nil;
+                NSString *message;
+                if (weakSelf.openclose) {
+                    message = @"Door opened!";
+                }else{
+                    message = @"Door closed!";
+                }
+                AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+                ALAlertBanner *banner = [ALAlertBanner alertBannerForView:appDelegate.window
+                                                                    style:ALAlertBannerStyleNotify
+                                                                 position:ALAlertBannerPositionUnderNavBar
+                                                                    title:weakSelf.title
+                                                                 subtitle:message];
+                [banner show];
             }
         });
     });

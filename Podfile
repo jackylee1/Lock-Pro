@@ -5,5 +5,6 @@
 
 target 'Lock Pro' do
     pod 'XLForm', '~> 3.1.1'
+    pod 'ALAlertBanner', '~> 0.3.1'
 end
 
