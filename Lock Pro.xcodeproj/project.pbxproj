@@ -13,6 +13,7 @@
 		5928374B1C9D51C8008F8CB3 /* salto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5928374A1C9D51C8008F8CB3 /* salto.jpg */; };
 		596EE4551CA15851005D84A2 /* ModalForUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EE4541CA15851005D84A2 /* ModalForUsers.m */; };
 		596EE4581CA19D91005D84A2 /* ModalForDoors.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EE4571CA19D91005D84A2 /* ModalForDoors.m */; };
+		596EE45B1CA1C1ED005D84A2 /* Calligraffiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 596EE45A1CA1C1ED005D84A2 /* Calligraffiti.ttf */; };
 		59AD17301C9AEDD500FEB73A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AD172F1C9AEDD500FEB73A /* main.m */; };
 		59AD17331C9AEDD500FEB73A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AD17321C9AEDD500FEB73A /* AppDelegate.m */; };
 		59AD17361C9AEDD500FEB73A /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AD17351C9AEDD500FEB73A /* Login.m */; };
@@ -41,6 +42,7 @@
 		596EE4541CA15851005D84A2 /* ModalForUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalForUsers.m; sourceTree = "<group>"; };
 		596EE4561CA19D91005D84A2 /* ModalForDoors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalForDoors.h; sourceTree = "<group>"; };
 		596EE4571CA19D91005D84A2 /* ModalForDoors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalForDoors.m; sourceTree = "<group>"; };
+		596EE45A1CA1C1ED005D84A2 /* Calligraffiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calligraffiti.ttf; sourceTree = "<group>"; };
 		59AD172B1C9AEDD500FEB73A /* Lock Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AD172F1C9AEDD500FEB73A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59AD17311C9AEDD500FEB73A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		596EE4591CA1C1DB005D84A2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				596EE45A1CA1C1ED005D84A2 /* Calligraffiti.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		59AD17221C9AEDD500FEB73A = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		59AD172D1C9AEDD500FEB73A /* Lock Pro */ = {
 			isa = PBXGroup;
 			children = (
+				596EE4591CA1C1DB005D84A2 /* Fonts */,
 				592837451C9D4F18008F8CB3 /* Images */,
 				59AD17311C9AEDD500FEB73A /* AppDelegate.h */,
 				59AD17321C9AEDD500FEB73A /* AppDelegate.m */,
@@ -237,6 +248,7 @@
 				590EDFF31C9EC44800E5E3C7 /* Login.xib in Resources */,
 				59E57FF51C9E1D300046E4FA /* MoreTab.xib in Resources */,
 				59AD173E1C9AEDD500FEB73A /* Assets.xcassets in Resources */,
+				596EE45B1CA1C1ED005D84A2 /* Calligraffiti.ttf in Resources */,
 				5928374B1C9D51C8008F8CB3 /* salto.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

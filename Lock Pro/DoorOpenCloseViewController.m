@@ -44,6 +44,10 @@
     
     UIColor *backgroundColor = [UIColor colorWithRed:0.965 green:0.965 blue:0.976 alpha:1.00];//[UIColor colorWithRed:0.937 green:0.937 blue:0.957 alpha:1.00];
     self.view.backgroundColor = backgroundColor;
+    
+    [self.openDoor.titleLabel setFont:[UIFont fontWithName:@"Calligraffiti" size:30]];
+    [self.closeDoor.titleLabel setFont:[UIFont fontWithName:@"Calligraffiti" size:30]];
+
 }
 
 -(UIActivityIndicatorView *)activiytIndicator {

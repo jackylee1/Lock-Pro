@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *passWord;
 @property (weak, nonatomic) IBOutlet UIButton *logIn;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIButton *forgotPassword;
 @end
 
 @implementation Login
@@ -51,6 +52,7 @@
     
     self.userName.delegate = self;
     self.passWord.delegate = self;
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
