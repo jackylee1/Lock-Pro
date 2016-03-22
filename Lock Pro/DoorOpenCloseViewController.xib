@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoorOpenCloseViewController">
             <connections>
                 <outlet property="closeDoor" destination="Pnm-5z-eq6" id="5f3-J4-qni"/>
+                <outlet property="imageView" destination="Uf9-Km-FdG" id="K1A-kM-hcr"/>
                 <outlet property="openDoor" destination="9MP-8E-9oK" id="HGe-ed-4yG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,6 +18,9 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uf9-Km-FdG">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnm-5z-eq6">
                     <rect key="frame" x="234" y="331.5" width="133" height="133"/>
                     <constraints>
@@ -48,6 +52,10 @@
                 <constraint firstItem="9MP-8E-9oK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-87" id="CCr-G4-goY"/>
                 <constraint firstItem="Pnm-5z-eq6" firstAttribute="centerX" secondItem="9MP-8E-9oK" secondAttribute="centerX" id="CNR-R4-bmk"/>
                 <constraint firstItem="9MP-8E-9oK" firstAttribute="width" secondItem="Pnm-5z-eq6" secondAttribute="width" id="Dhw-h6-XR0"/>
+                <constraint firstItem="Uf9-Km-FdG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aJw-g2-fn2"/>
+                <constraint firstAttribute="trailing" secondItem="Uf9-Km-FdG" secondAttribute="trailing" id="fWn-qk-ql6"/>
+                <constraint firstItem="Uf9-Km-FdG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jnh-rJ-dBF"/>
+                <constraint firstAttribute="bottom" secondItem="Uf9-Km-FdG" secondAttribute="bottom" id="xvZ-h4-tni"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

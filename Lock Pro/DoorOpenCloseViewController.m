@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *closeDoor;
 @property (strong, nonatomic) UIActivityIndicatorView *activiytIndicator;
 @property (assign, nonatomic) BOOL openclose;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
 @implementation DoorOpenCloseViewController
@@ -26,7 +27,7 @@
     self.openDoor.layer.cornerRadius = self.openDoor.bounds.size.width / 2.0;
     [self.openDoor setBackgroundColor:[UIColor colorWithRed:0.086 green:0.494 blue:0.984 alpha:0.9]];
     [self.openDoor setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    self.openDoor.alpha = 0.9;
+    self.openDoor.alpha = 0.93;
     self.openDoor.layer.shadowRadius = 3.0f;
     self.openDoor.layer.shadowColor = [UIColor blackColor].CGColor;
     self.openDoor.layer.shadowOffset = CGSizeMake(0.0f, 3.0f);
