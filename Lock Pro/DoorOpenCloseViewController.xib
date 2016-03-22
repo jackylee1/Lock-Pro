@@ -24,6 +24,7 @@
                         <constraint firstAttribute="width" constant="133" id="ztv-lb-Gaf"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <inset key="titleEdgeInsets" minX="-3" minY="7" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="Close"/>
                     <connections>
                         <action selector="closeTapped:" destination="-1" eventType="touchUpInside" id="D6E-FS-yfk"/>
@@ -32,6 +33,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MP-8E-9oK">
                     <rect key="frame" x="234" y="146.5" width="133" height="133"/>
                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <inset key="titleEdgeInsets" minX="-4" minY="3" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="Open"/>
                     <connections>
                         <action selector="openTapped:" destination="-1" eventType="touchUpInside" id="CZr-5m-T0J"/>
