@@ -31,8 +31,12 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
--(void)doneTappedWithFirstFieldAs:(NSString *)name andSecoondFieldAs:(NSString *)type {
-    if ([name length]>0 & [type length]>0) {
+-(void)doneTapped:(NSDictionary *)dictionary {
+    NSString *name = [dictionary objectForKey:@"name"];
+    NSString *type = [dictionary objectForKey:@"accessType"];
+    NSString *email = [dictionary objectForKey:@"email"];
+
+    if (![name isKindOfClass:[NSNull class]] & ![type isKindOfClass:[NSNull class]]) {
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
         NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
@@ -41,7 +45,9 @@
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
         [newManagedObject setValue:name forKey:@"name"];
         [newManagedObject setValue:type forKey:@"type"];
-        
+        if (![email isKindOfClass:[NSNull class]]) {
+            [newManagedObject setValue:type forKey:@"email"];
+        }        
         // Save the context.
         NSError *error = nil;
         if (![context save:&error]) {
@@ -51,11 +57,13 @@
             abort();
         }
     }
+
 }
 
 - (void)insertNewObject:(id)sender {
     UINavigationController *modalNavbar = [[UINavigationController alloc]init];
     ModalForUsers *modal = [[ModalForUsers alloc]init];
+    modal.delegate = self;
 //    Modal *modal = [[Modal alloc]initWithPlaceholders:@"Enter User Name"andShowPickerView:YES];
 //    modal.delegate = self;
 //    modal.modalPresentationStyle = UIModalPresentationFormSheet;

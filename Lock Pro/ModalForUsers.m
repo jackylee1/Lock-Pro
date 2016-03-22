@@ -45,12 +45,18 @@
     [section addFormRow:row];
     
     // Second Section
-    section = [XLFormSectionDescriptor formSectionWithTitle:@"Access Level"];
+    section = [XLFormSectionDescriptor formSectionWithTitle:@""];
     section.footerTitle = @"Enter the access level and doors for the user";
     [form addFormSection:section];
     
     // Admin Or Guest
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"adminOrGuest" rowType:XLFormRowDescriptorTypeBooleanSwitch title:@"Admin"];
+//    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"accessType" rowType:XLFormRowDescriptorTypeBooleanSwitch title:@"Admin"];
+//    [section addFormRow:row];
+        
+    // --------- Inline Selectors
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"accessType" rowType:XLFormRowDescriptorTypeSelectorPickerViewInline title:@"Select Access Type"];
+    row.selectorOptions = @[@"Guest", @"Admin"];
+    row.value = @"Guest";
     [section addFormRow:row];
     
     // Multi Select
@@ -79,7 +85,7 @@
     ModalForUsers __weak *weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self dismissViewControllerAnimated:YES completion:^{
-            //[weakSelf.delegate doneTappedWithFirstFieldAs:weakSelf.firstTextField.text andSecoondFieldAs:_typesOfUsers[[weakSelf.pickerField selectedRowInComponent:0]]];
+            [weakSelf.delegate doneTapped:[weakSelf.form formValues]];
         }];
     });
     

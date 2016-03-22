@@ -11,7 +11,7 @@
 #import "Modal.h"
 #import "ModalForUsers.h"
 
-@interface UsersTab : UITableViewController<NSFetchedResultsControllerDelegate, ModalDelegate>
+@interface UsersTab : UITableViewController<NSFetchedResultsControllerDelegate, ModalForUsersDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end

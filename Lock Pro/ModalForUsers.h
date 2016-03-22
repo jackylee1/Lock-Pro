@@ -8,6 +8,12 @@
 
 #import <XLForm/XLForm.h>
 
-@interface ModalForUsers : XLFormViewController
+@protocol ModalForUsersDelegate <NSObject>
 
+-(void) doneTapped:(NSDictionary *) dictionary;
+
+@end
+
+@interface ModalForUsers : XLFormViewController
+@property (weak, nonatomic) id<ModalForUsersDelegate> delegate;
 @end
