@@ -26,6 +26,23 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    UIBarButtonItem *clearAllButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStyleDone target:self action:@selector(clearAllTapped)];
+    self.navigationItem.rightBarButtonItem = clearAllButton;
+}
+
+-(void) clearAllTapped {
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    for (NSManagedObject *object in [self.fetchedResultsController fetchedObjects]) {
+        NSIndexPath *indexPath = [self.fetchedResultsController indexPathForObject:object];
+        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+        NSError *error = nil;
+        if (![context save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
 }
 
 -(void)doneTappedWithFirstFieldAs:(NSString *)name andSecoondFieldAs:(NSString *)type {
