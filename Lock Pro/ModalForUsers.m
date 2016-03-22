@@ -18,7 +18,7 @@
     self.navigationItem.rightBarButtonItem = doneButton;
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelTapped)];
     self.navigationItem.leftBarButtonItem = cancelButton;
-    self.view.backgroundColor = [UIColor colorWithRed:0.965 green:0.965 blue:0.976 alpha:1.00];
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.965 green:0.965 blue:0.976 alpha:1.00];
 }
 
 -(void) initializeForm {

@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "Modal.h"
+#import "ModalForDoors.h"
 
-@interface DoorsTab : UITableViewController<NSFetchedResultsControllerDelegate, ModalDelegate>
+@interface DoorsTab : UITableViewController<NSFetchedResultsControllerDelegate, ModalForDoorsDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end

@@ -64,10 +64,8 @@
     UINavigationController *modalNavbar = [[UINavigationController alloc]init];
     ModalForUsers *modal = [[ModalForUsers alloc]init];
     modal.delegate = self;
-//    Modal *modal = [[Modal alloc]initWithPlaceholders:@"Enter User Name"andShowPickerView:YES];
-//    modal.delegate = self;
-//    modal.modalPresentationStyle = UIModalPresentationFormSheet;
-//    modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    modal.modalPresentationStyle = UIModalPresentationFormSheet;
+    modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [modalNavbar pushViewController:modal animated:NO];
     [self presentViewController:modalNavbar animated:YES completion: nil];
 }
@@ -89,7 +87,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    return 44;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
