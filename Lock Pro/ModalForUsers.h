@@ -15,5 +15,7 @@
 @end
 
 @interface ModalForUsers : XLFormViewController
+-(instancetype)initWithArray:(NSArray *) array;
 @property (weak, nonatomic) id<ModalForUsersDelegate> delegate;
+@property (strong, nonatomic) NSArray *array;
 @end

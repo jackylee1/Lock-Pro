@@ -61,13 +61,48 @@
 }
 
 - (void)insertNewObject:(id)sender {
-    UINavigationController *modalNavbar = [[UINavigationController alloc]init];
-    ModalForUsers *modal = [[ModalForUsers alloc]init];
-    modal.delegate = self;
-    modal.modalPresentationStyle = UIModalPresentationFormSheet;
-    modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    [modalNavbar pushViewController:modal animated:NO];
-    [self presentViewController:modalNavbar animated:YES completion: nil];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Doors" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:@"name" cacheName:nil];
+    NSFetchedResultsController *fetchedResultsController = aFetchedResultsController;
+    NSError *error = nil;
+    if (![fetchedResultsController performFetch:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }else{
+        NSMutableArray *array = [[NSMutableArray alloc]init];
+        for (id<NSFetchedResultsSectionInfo> section in [fetchedResultsController sections]) {
+            [array addObject:[section name]];
+        }
+        if ([array count]>0) {
+        UINavigationController *modalNavbar = [[UINavigationController alloc]init];
+        ModalForUsers *modal = [[ModalForUsers alloc]initWithArray:array];
+        modal.delegate = self;
+        modal.modalPresentationStyle = UIModalPresentationFormSheet;
+        modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        [modalNavbar pushViewController:modal animated:NO];
+        [self presentViewController:modalNavbar animated:YES completion: nil];
+        }else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Doors Defined"
+                                                            message:@"Please add a door first"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

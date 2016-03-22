@@ -10,6 +10,14 @@
 
 @implementation ModalForUsers
 
+-(instancetype)initWithArray:(NSArray *) array {
+    self = [super init];
+    if (self) {
+        self.array = array;
+    }
+    return self;
+}
+
 -(void)viewDidLoad {
     [super viewDidLoad];
     [self initializeForm];
@@ -18,11 +26,10 @@
     self.navigationItem.rightBarButtonItem = doneButton;
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelTapped)];
     self.navigationItem.leftBarButtonItem = cancelButton;
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.965 green:0.965 blue:0.976 alpha:1.00];
+    self.view.backgroundColor = [UIColor colorWithRed:0.965 green:0.965 blue:0.976 alpha:1.00];
 }
 
--(void) initializeForm {
-    
+-(void) initializeForm {    
     XLFormDescriptor * form;
     XLFormSectionDescriptor * section;
     XLFormRowDescriptor * row;
@@ -46,7 +53,7 @@
     
     // Second Section
     section = [XLFormSectionDescriptor formSectionWithTitle:@""];
-    section.footerTitle = @"Enter the access level and doors for the user";
+    section.footerTitle = @"Enter the access type and doors accessible for the user";
     [form addFormSection:section];
     
     // Admin Or Guest
@@ -61,7 +68,7 @@
     
     // Multi Select
     row = [XLFormRowDescriptor formRowDescriptorWithTag:@"adminOrGuest" rowType:XLFormRowDescriptorTypeMultipleSelector title:@"Select Doors"];
-    row.selectorOptions = @[@"Garage", @"Front Door", @"Kitchen"];
+        row.selectorOptions = self.array;//@[@"Garage", @"Front Door", @"Kitchen"];
     row.value = @[];
     [section addFormRow:row];
     
@@ -70,6 +77,8 @@
     
     self.form = form;
     
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.965 green:0.965 blue:0.976 alpha:1.00];
+
 }
 
 -(void) cancelTapped {
