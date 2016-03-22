@@ -223,7 +223,7 @@
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     //cell.backgroundColor = [[UIColor colorWithRed:0.965 green:0.961 blue:0.965 alpha:1.00] colorWithAlphaComponent:0.3];
     cell.textLabel.textColor = [UIColor darkGrayColor];
-    cell.detailTextLabel.textColor = [UIColor darkGrayColor];
+    cell.detailTextLabel.textColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.9];
 //Shutter effect
 //    cell.backgroundColor = [[UIColor colorWithRed:0.965 green:0.961 blue:0.965 alpha:1.00] colorWithAlphaComponent:1];
 //    cell.textLabel.textColor = [UIColor darkGrayColor];

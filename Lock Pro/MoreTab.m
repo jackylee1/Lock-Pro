@@ -52,7 +52,7 @@
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.textColor = [UIColor colorWithRed:0.863 green:0.325 blue:0.290 alpha:0.9];
     }else{
-        cell.textLabel.text = @"Contact Info";
+        cell.textLabel.text = @"Goodbye!";
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.textColor = [UIColor darkGrayColor];
     }
