@@ -11,6 +11,7 @@
 		5918DF381C9FE3C100EB3E68 /* UsersTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 5918DF361C9FE3C100EB3E68 /* UsersTab.m */; };
 		5918DF3E1CA000E500EB3E68 /* DoorOpenCloseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5918DF3C1CA000E500EB3E68 /* DoorOpenCloseViewController.xib */; };
 		5928374B1C9D51C8008F8CB3 /* salto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5928374A1C9D51C8008F8CB3 /* salto.jpg */; };
+		596EE4551CA15851005D84A2 /* ModalForUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 596EE4541CA15851005D84A2 /* ModalForUsers.m */; };
 		5991F0821C9EEEBE006472CF /* Modal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5991F0801C9EEEBE006472CF /* Modal.m */; };
 		5991F0831C9EEEBE006472CF /* Modal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5991F0811C9EEEBE006472CF /* Modal.xib */; };
 		59AD17301C9AEDD500FEB73A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AD172F1C9AEDD500FEB73A /* main.m */; };
@@ -27,14 +28,18 @@
 		59E57FF51C9E1D300046E4FA /* MoreTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E57FF31C9E1D300046E4FA /* MoreTab.xib */; };
 		59E8C9401CA03396009EE8BF /* HistoryTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E8C93F1CA03396009EE8BF /* HistoryTab.m */; };
 		59F227911CA00F3E0006EC43 /* DoorOpenCloseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F227901CA00F3E0006EC43 /* DoorOpenCloseViewController.m */; };
+		D91B8C705436BA8B1C764E49 /* Pods_Lock_Pro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3527AA7AFACF6722D3C5198D /* Pods_Lock_Pro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3527AA7AFACF6722D3C5198D /* Pods_Lock_Pro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lock_Pro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		590EDFF11C9EC44800E5E3C7 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		5918DF351C9FE3C100EB3E68 /* UsersTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersTab.h; sourceTree = "<group>"; };
 		5918DF361C9FE3C100EB3E68 /* UsersTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersTab.m; sourceTree = "<group>"; };
 		5918DF3C1CA000E500EB3E68 /* DoorOpenCloseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoorOpenCloseViewController.xib; sourceTree = "<group>"; };
 		5928374A1C9D51C8008F8CB3 /* salto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salto.jpg; sourceTree = "<group>"; };
+		596EE4531CA15851005D84A2 /* ModalForUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalForUsers.h; sourceTree = "<group>"; };
+		596EE4541CA15851005D84A2 /* ModalForUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalForUsers.m; sourceTree = "<group>"; };
 		5991F07F1C9EEEBE006472CF /* Modal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Modal.h; sourceTree = "<group>"; };
 		5991F0801C9EEEBE006472CF /* Modal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Modal.m; sourceTree = "<group>"; };
 		5991F0811C9EEEBE006472CF /* Modal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Modal.xib; sourceTree = "<group>"; };
@@ -62,6 +67,8 @@
 		59E8C93F1CA03396009EE8BF /* HistoryTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTab.m; sourceTree = "<group>"; };
 		59F2278F1CA00F3E0006EC43 /* DoorOpenCloseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoorOpenCloseViewController.h; sourceTree = "<group>"; };
 		59F227901CA00F3E0006EC43 /* DoorOpenCloseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoorOpenCloseViewController.m; sourceTree = "<group>"; };
+		B832BD3663FFE22A501C920E /* Pods-Lock Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Pro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lock Pro/Pods-Lock Pro.release.xcconfig"; sourceTree = "<group>"; };
+		CECD3B2F23A231C85AD01C72 /* Pods-Lock Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Pro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lock Pro/Pods-Lock Pro.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +76,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D91B8C705436BA8B1C764E49 /* Pods_Lock_Pro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0408F489970A5AD62D207B73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3527AA7AFACF6722D3C5198D /* Pods_Lock_Pro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AF49F2054D1A91A9A8703E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CECD3B2F23A231C85AD01C72 /* Pods-Lock Pro.debug.xcconfig */,
+				B832BD3663FFE22A501C920E /* Pods-Lock Pro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		592837451C9D4F18008F8CB3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +114,8 @@
 			children = (
 				59AD172D1C9AEDD500FEB73A /* Lock Pro */,
 				59AD172C1C9AEDD500FEB73A /* Products */,
+				3AF49F2054D1A91A9A8703E9 /* Pods */,
+				0408F489970A5AD62D207B73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +160,8 @@
 				5918DF3C1CA000E500EB3E68 /* DoorOpenCloseViewController.xib */,
 				59E8C93E1CA03396009EE8BF /* HistoryTab.h */,
 				59E8C93F1CA03396009EE8BF /* HistoryTab.m */,
+				596EE4531CA15851005D84A2 /* ModalForUsers.h */,
+				596EE4541CA15851005D84A2 /* ModalForUsers.m */,
 			);
 			path = "Lock Pro";
 			sourceTree = "<group>";
@@ -152,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59AD17451C9AEDD500FEB73A /* Build configuration list for PBXNativeTarget "Lock Pro" */;
 			buildPhases = (
+				1676C29161D1AABA986440C6 /* Check Pods Manifest.lock */,
 				59AD17271C9AEDD500FEB73A /* Sources */,
 				59AD17281C9AEDD500FEB73A /* Frameworks */,
 				59AD17291C9AEDD500FEB73A /* Resources */,
+				5F89FCFFFED44886480E7DC7 /* Embed Pods Frameworks */,
+				F29FD6B833ADE63510D83CAF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +247,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1676C29161D1AABA986440C6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F89FCFFFED44886480E7DC7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lock Pro/Pods-Lock Pro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F29FD6B833ADE63510D83CAF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lock Pro/Pods-Lock Pro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		59AD17271C9AEDD500FEB73A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -228,6 +308,7 @@
 				59AD173C1C9AEDD500FEB73A /* Lock_Pro.xcdatamodeld in Sources */,
 				5991F0821C9EEEBE006472CF /* Modal.m in Sources */,
 				59AD17301C9AEDD500FEB73A /* main.m in Sources */,
+				596EE4551CA15851005D84A2 /* ModalForUsers.m in Sources */,
 				59E8C9401CA03396009EE8BF /* HistoryTab.m in Sources */,
 				5918DF381C9FE3C100EB3E68 /* UsersTab.m in Sources */,
 				59F227911CA00F3E0006EC43 /* DoorOpenCloseViewController.m in Sources */,
@@ -333,6 +414,7 @@
 		};
 		59AD17461C9AEDD500FEB73A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CECD3B2F23A231C85AD01C72 /* Pods-Lock Pro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -346,6 +428,7 @@
 		};
 		59AD17471C9AEDD500FEB73A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B832BD3663FFE22A501C920E /* Pods-Lock Pro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

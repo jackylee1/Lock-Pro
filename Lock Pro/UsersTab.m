@@ -55,10 +55,11 @@
 
 - (void)insertNewObject:(id)sender {
     UINavigationController *modalNavbar = [[UINavigationController alloc]init];
-    Modal *modal = [[Modal alloc]initWithPlaceholders:@"Enter User Name"andShowPickerView:YES];
-    modal.delegate = self;
-    modal.modalPresentationStyle = UIModalPresentationFormSheet;
-    modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    ModalForUsers *modal = [[ModalForUsers alloc]init];
+//    Modal *modal = [[Modal alloc]initWithPlaceholders:@"Enter User Name"andShowPickerView:YES];
+//    modal.delegate = self;
+//    modal.modalPresentationStyle = UIModalPresentationFormSheet;
+//    modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [modalNavbar pushViewController:modal animated:NO];
     [self presentViewController:modalNavbar animated:YES completion: nil];
 }

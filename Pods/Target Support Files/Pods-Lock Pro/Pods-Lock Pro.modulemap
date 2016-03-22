@@ -1,0 +1,6 @@
+framework module Pods_Lock_Pro {
+  umbrella header "Pods-Lock Pro-umbrella.h"
+
+  export *
+  module * { export * }
+}

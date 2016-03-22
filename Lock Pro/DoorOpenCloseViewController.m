@@ -31,7 +31,7 @@
     self.openDoor.layer.shadowOffset = CGSizeMake(0.0f, 3.0f);
     self.openDoor.layer.shadowOpacity = 0.5f;
     
-    [self.closeDoor setBackgroundColor:[UIColor colorWithRed:0.988 green:0.294 blue:0.278 alpha:0.9]];//[UIColor whiteColor] colorWithAlphaComponent:0.9]];
+    [self.closeDoor setBackgroundColor:[UIColor colorWithRed:0.988 green:0.294 blue:0.278 alpha:0.86]];//[UIColor whiteColor] colorWithAlphaComponent:0.9]];
     //self.closeDoor.layer.borderColor = [[UIColor clearColor] CGColor];
     [self.closeDoor setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //self.closeDoor.layer.borderWidth = 0.9;

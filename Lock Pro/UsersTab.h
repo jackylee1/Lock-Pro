@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "Modal.h"
+#import "ModalForUsers.h"
 
 @interface UsersTab : UITableViewController<NSFetchedResultsControllerDelegate, ModalDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
