@@ -23,22 +23,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.openDoor.layer.cornerRadius = self.openDoor.bounds.size.width / 2.0;
-    [self.openDoor setBackgroundColor:[UIColor colorWithRed:0.086 green:0.494 blue:0.984 alpha:1.00]];
+    [self.openDoor setBackgroundColor:[UIColor colorWithRed:0.086 green:0.494 blue:0.984 alpha:0.9]];
     [self.openDoor setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.openDoor.alpha = 0.9;
     self.openDoor.layer.shadowRadius = 3.0f;
     self.openDoor.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.openDoor.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
+    self.openDoor.layer.shadowOffset = CGSizeMake(0.0f, 3.0f);
     self.openDoor.layer.shadowOpacity = 0.5f;
     
-    [self.closeDoor setBackgroundColor:[UIColor whiteColor]];
-    self.closeDoor.layer.borderColor = [[UIColor clearColor] CGColor];//[[UIColor colorWithRed:0.086 green:0.494 blue:0.984 alpha:1.00] CGColor];
-    self.closeDoor.layer.borderWidth = 0.9;
+    [self.closeDoor setBackgroundColor:[UIColor colorWithRed:0.988 green:0.294 blue:0.278 alpha:0.9]];//[UIColor whiteColor] colorWithAlphaComponent:0.9]];
+    //self.closeDoor.layer.borderColor = [[UIColor clearColor] CGColor];
+    [self.closeDoor setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    //self.closeDoor.layer.borderWidth = 0.9;
     self.closeDoor.layer.cornerRadius = self.closeDoor.bounds.size.width / 2.0;
     self.closeDoor.alpha = 0.9;
     self.closeDoor.layer.shadowRadius = 3.0f;
     self.closeDoor.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.closeDoor.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
+    self.closeDoor.layer.shadowOffset = CGSizeMake(0.0f, 3.0f);
     self.closeDoor.layer.shadowOpacity = 0.5f;
     
     UIColor *backgroundColor = [UIColor colorWithRed:0.965 green:0.965 blue:0.976 alpha:1.00];//[UIColor colorWithRed:0.937 green:0.937 blue:0.957 alpha:1.00];

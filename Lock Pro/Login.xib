@@ -53,7 +53,7 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                             <state key="normal" title="Forgot Password ?">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.99341066919191923" green="0.99341066919191923" blue="0.99341066919191923" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
                     </subviews>
