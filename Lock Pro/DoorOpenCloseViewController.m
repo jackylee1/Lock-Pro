@@ -40,6 +40,9 @@
     self.closeDoor.layer.shadowColor = [UIColor blackColor].CGColor;
     self.closeDoor.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
     self.closeDoor.layer.shadowOpacity = 0.5f;
+    
+    UIColor *backgroundColor = [UIColor colorWithRed:0.965 green:0.965 blue:0.976 alpha:1.00];//[UIColor colorWithRed:0.937 green:0.937 blue:0.957 alpha:1.00];
+    self.view.backgroundColor = backgroundColor;
 }
 
 -(UIActivityIndicatorView *)activiytIndicator {

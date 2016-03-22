@@ -57,7 +57,7 @@
         cell.textLabel.textColor = [UIColor darkGrayColor];
     }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    cell.backgroundColor = [[UIColor colorWithRed:0.965 green:0.961 blue:0.965 alpha:1.00] colorWithAlphaComponent:0.3];
+    //cell.backgroundColor = [[UIColor colorWithRed:0.965 green:0.961 blue:0.965 alpha:1.00] colorWithAlphaComponent:0.3];
     return cell;
 }
 

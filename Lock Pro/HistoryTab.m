@@ -25,6 +25,7 @@
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 -(void)doneTappedWithFirstFieldAs:(NSString *)name andSecoondFieldAs:(NSString *)type {
@@ -70,13 +71,17 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section==0) {
-        return 3;
+        return 30;
     }
-    return 1;
+    return 15;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 1;
+    return 15;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
 }
 
 #pragma mark - Fetched results controller
@@ -201,7 +206,7 @@
         openclosed = @"closed";
     }
     NSString *who = [[object valueForKey:@"who"] description];
-    NSString *string = [NSString stringWithFormat:@"%@ %@ door",who,openclosed];
+    NSString *string = [NSString stringWithFormat:@"%@ %@",who,openclosed];
     cell.textLabel.text = string;
     NSDate *date = [object valueForKey:@"time"];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
@@ -216,7 +221,7 @@
     }
     [self configureCell:cell atIndexPath:indexPath];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    cell.backgroundColor = [[UIColor colorWithRed:0.965 green:0.961 blue:0.965 alpha:1.00] colorWithAlphaComponent:0.3];
+    //cell.backgroundColor = [[UIColor colorWithRed:0.965 green:0.961 blue:0.965 alpha:1.00] colorWithAlphaComponent:0.3];
     cell.textLabel.textColor = [UIColor darkGrayColor];
     cell.detailTextLabel.textColor = [UIColor darkGrayColor];
 //Shutter effect
