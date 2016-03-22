@@ -62,13 +62,15 @@
         
     // --------- Inline Selectors
     row = [XLFormRowDescriptor formRowDescriptorWithTag:@"accessType" rowType:XLFormRowDescriptorTypeSelectorPickerViewInline title:@"Select Access Type"];
+    [row.cellConfig setObject:[UIColor darkGrayColor] forKey: @"textLabel.color"];
     row.selectorOptions = @[@"Guest", @"Admin"];
     row.value = @"Guest";
     [section addFormRow:row];
     
     // Multi Select
     row = [XLFormRowDescriptor formRowDescriptorWithTag:@"adminOrGuest" rowType:XLFormRowDescriptorTypeMultipleSelector title:@"Select Doors"];
-        row.selectorOptions = self.array;//@[@"Garage", @"Front Door", @"Kitchen"];
+    [row.cellConfig setObject:[UIColor darkGrayColor] forKey: @"textLabel.color"];
+    row.selectorOptions = self.array;//@[@"Garage", @"Front Door", @"Kitchen"];
     row.value = @[];
     [section addFormRow:row];
     
