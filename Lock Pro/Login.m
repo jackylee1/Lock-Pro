@@ -29,10 +29,10 @@
     [self.passWord setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.5f]];
     [self.passWord setTextColor:[UIColor whiteColor]];
     self.userName.layer.borderColor = [[UIColor whiteColor] CGColor];
-    self.userName.layer.borderWidth = 1.5;
+    self.userName.layer.borderWidth = 1.2;
     self.userName.layer.cornerRadius = 5;
     self.passWord.layer.borderColor = [[UIColor whiteColor] CGColor];
-    self.passWord.layer.borderWidth = 1.5;
+    self.passWord.layer.borderWidth = 1.2;
     self.passWord.layer.cornerRadius = 5;
     
     UIColor *color = [UIColor whiteColor];
@@ -76,7 +76,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
+    //self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     [self addObservers];
 }
 
